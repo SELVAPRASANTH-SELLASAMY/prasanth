@@ -3,7 +3,7 @@
 }
 .serviceContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     gap: 2rem;
 }
 .serviceTile{
@@ -47,7 +47,7 @@
     font-size: var(--small-1);
     color: var(--lightBlue);
     line-height: 2rem;
-    text-align: justify;
+    /* text-align: justify; */
 }
 .serviceTile:hover{
     transform: translateY(-.5rem);

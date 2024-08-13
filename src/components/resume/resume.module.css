@@ -1,0 +1,104 @@
+.resume h2::before{
+    content: "Resume";
+}
+.resumeWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+
+    --pointLineWidth: .3rem;
+    --minimumYearWidth: 117px;
+    --timeLineGap: 5rem;
+    --pointCircleSize: 1rem;
+}
+/* .resumeWrapper .education,.resumeWrapper .experience{
+
+} */
+.resumeWrapper h4{
+    color: #ffffff;
+    font-size: var(--small-15);
+    margin-bottom: 2.5rem;
+}
+.resumeWrapper h4 span{
+    color: var(--green);
+    margin: 0 .5rem;
+    vertical-align: middle;
+}
+.resumeWrapper .timeline{
+    display: flex;
+    align-items: flex-start;
+    gap: var(--timeLineGap);
+    position: relative;
+}
+.resumeWrapper .timeline::before{
+    content: "";
+    height: 100%;
+    width: var(--pointLineWidth);
+    background-color: var(--lightGrey);
+    position: absolute;
+    left: calc(var(--minimumYearWidth) + var(--timeLineGap) / 2);
+    top: 0;
+}
+.resumeWrapper .timeline{
+    padding: 1rem 0;
+}
+.resumeWrapper .year{
+    color: var(--lightBlue);
+    font-size: var(--small);
+    background-color: var(--lightGreen);
+    border-radius: 50px;
+    padding: .25rem 1rem;
+    white-space: nowrap;
+    min-width: var(--minimumYearWidth);
+    text-align: center;
+    position: relative;
+    margin-top: .2rem;
+}
+.resumeWrapper .year::after{
+    content: "";
+    background-color: var(--commonBg);
+    height: var(--pointCircleSize);
+    width: var(--pointCircleSize);
+    border-radius: 50%;
+    border: var(--pointLineWidth) solid var(--lightGrey);
+    position: absolute;
+    --v1: calc(var(--minimumYearWidth) + var(--timeLineGap) / 2);
+    left: calc( var(--v1) - var(--pointCircleSize) / 2 - var(--pointLineWidth) / 2);
+    top: calc(50% - .65rem);
+    z-index: 2;
+}
+/* .resumeWrapper .activity{
+
+} */
+.resumeWrapper h5.field{
+    color: var(--green);
+    font-size: var(--small-1);
+    font-weight: 500;
+    line-height: 2rem;
+    position: relative;
+}
+.resumeWrapper h5.field::before{
+    content: "";
+    position: absolute;
+    --width: calc(var(--timeLineGap) - 1rem);
+    width: calc(var(--timeLineGap) - 1rem);
+    height: var(--pointLineWidth);
+    left: calc(var(--timeLineGap) / 2 * -1 - var(--width) / 2 + var(--pointLineWidth) / 2);
+    top: calc(50% - var(--pointLineWidth) / 2);
+    background-color: var(--lightGrey);
+    border-radius: 50px;
+}
+.resumeWrapper p.orgName{
+    color: #ffffff;
+    font-size: var(--small);
+    line-height: 2.5rem;
+}
+.resumeWrapper p.activityInfo{
+    color: var(--lightBlue);
+    font-size: var(--small);
+    line-height: 1.5rem;
+    text-align: justify;
+}
+.resumeWrapper abbr{
+    text-decoration: none;
+}

@@ -1,0 +1,85 @@
+.skill h2::before{
+    content: "skills";
+}
+.techContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 2rem;
+}
+.skillTile{
+    background-color: var(--tileBlue);
+    border-radius: .5rem;
+    box-shadow: var(--smokeShadow);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding: .5rem;
+    transition: 500ms;
+}
+.skillTile:hover{
+    transform: translateY(-.5rem);
+}
+.skillTile svg{
+    vertical-align: top;
+    width: 80%;
+}
+.skillTile svg circle{
+    fill: none;
+    stroke: var(--green);
+    stroke-width: .6rem;
+    stroke-dasharray: 282.74;
+    /* stroke-dashoffset: calc(2.8274 * 1); */
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    position: relative;
+}
+.skillTile svg circle.staticCircle{
+    stroke: var(--lightGreen);
+}
+.skillTile svg text{
+    fill: var(--lightBlue);
+    font-size: var(--small);
+}
+p.skillName strong{
+    color: #ffffff;
+    font-size: var(--small-1);
+    text-align: center;
+    font-weight: 500;
+}
+p.skillName{
+    margin-bottom: .5rem;
+}
+.progressBarContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    margin-top: 2.5rem;
+}
+.progressBarContainer progress[value]{
+    background: var(--lightGreen);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    width: 100%;
+    height: 1.15rem;
+}
+.progressBarContainer progress[value]::-webkit-progress-bar{
+    background: var(--lightGreen);
+    border-radius: 50px;
+}
+.progressBarContainer progress[value]::-webkit-progress-value{
+    background: var(--green);
+    border-radius: 50px;
+}
+.progressBarContainer label{
+    color: #ffffff;
+    font-size: var(--small-1);
+    display: block;
+    margin: 1rem 0;
+}
+.progressBarContainer label span{
+    color: var(--green);
+}

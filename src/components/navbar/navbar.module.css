@@ -1,0 +1,63 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #0f172acc;
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    border-bottom: .1rem solid rgba(255, 255, 255, 0.2);
+}
+.navbar h1{
+    font-size: var(--small-2);
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+.navbar h1::after{
+    content: ".";
+    color: #ffffff;
+}
+nav{
+    display: flex;
+    font-size: var(--small);
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ol{
+    display: inherit;
+    list-style: decimal-leading-zero;
+    gap: 3.5rem;
+}
+nav ol li{
+    color: var(--green);
+    cursor: pointer;
+    position: relative;
+}
+nav ol li::after{
+    content: "";
+    height: .2rem;
+    border-radius: 5px;
+    width: 0;
+    background-color: var(--green);
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    transition: 250ms;
+}
+nav ol li:hover > a{
+    color: var(--green);
+}
+nav ol li:hover::after{
+    width: 100%;
+}
+nav ol li a{
+    color: #ffffff;
+    text-decoration: none;
+}

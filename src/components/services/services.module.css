@@ -1,0 +1,65 @@
+.services h2::before{
+    content: "Services";
+}
+.serviceContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+    gap: 2rem;
+}
+.serviceTile{
+    background-color: var(--tileBlue);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: var(--smokeShadow);
+    transition: 500ms;
+    position: relative;
+}
+.serviceTile .serielNumber{
+    font-size: var(--small-2);
+    color: #ffffff;
+    opacity: .05;
+    transform: scaleY(1.4);
+    font-weight: 900;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    letter-spacing: .25rem;
+}
+.serviceTile figure{
+    height: 5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--lightGreen);
+    display: grid;
+    place-content: center;
+}
+.serviceTile figure > *{
+    font-size: 2.5rem;
+    color: var(--green);
+}
+.serviceTile h4{
+    font-size: var(--small-15);
+    color: #ffffff;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+.serviceTile p{
+    font-size: var(--small-1);
+    color: var(--lightBlue);
+    line-height: 2rem;
+    text-align: justify;
+}
+.serviceTile:hover{
+    transform: translateY(-.5rem);
+}
+.serviceTile:hover figure > *{
+    animation: scaleUp 250ms linear 1;
+}
+@keyframes scaleUp {
+    From{
+        transform: scale(2);
+    }
+    To{
+        transform: scale(1);
+    }
+}

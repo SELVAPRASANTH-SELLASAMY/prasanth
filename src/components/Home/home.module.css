@@ -1,0 +1,86 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100vh;
+    min-height: 650px;
+}
+.home img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+.home h1{
+    font-size: var(--medium);
+    color: #ffffff;
+}
+.home h1 span{
+    color: var(--green);
+}
+.home p{
+    color: var(--lightBlue);
+    font-size: var(--small-1);
+    max-width: 950px;
+    text-align: center;
+}
+.home .socialMedias{
+    color: var(--lightBlue);
+    font-size: 2.5rem;
+    display: flex;
+    gap: 1rem;
+}
+.home .socialMedias div{
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    overflow: hidden;
+    border-radius: .25rem;
+    cursor: pointer;
+    box-shadow: var(--smokeShadow);
+    background-color: rgb(15 23 42); /*TODO:Can be stored in variable*/
+}
+.home .socialMedias div :nth-child(even){
+    background-color: var(--green);
+    color: #000000;
+}
+.home .socialMedias div > *{
+    min-height: 40px;
+    padding: .5rem;
+    transition: 500ms;
+    border-radius: .25rem;
+}
+.home .socialMedias div:hover > *{
+    transform: translateY(-40px);
+}
+.home p.scrollDown{
+    font-size: var(--x-small);
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.home p.scrollDown span{
+    font-size: var(--small);
+    margin-right: .5rem;
+    animation: arrowAnimation 500ms ease-in-out infinite alternate;
+}
+.home p.scrollDown:hover{
+    color: var(--green);
+}
+@keyframes arrowAnimation {
+    From{transform: translateY(-.2rem);}
+    To{transform: translateY(.2rem);}
+}
+.typingCursor{
+    opacity: 1;
+}
+.pausetyping{
+    animation: cursorBlink 600ms ease-in-out infinite;
+}
+@keyframes cursorBlink {
+    From{opacity: 0;}
+    To{opacity: 1;}
+}

@@ -1,0 +1,130 @@
+.about .info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+.about h2::before{
+    content: "About";
+}
+/* .about .info{
+    margin: 5rem 0;
+} */
+.border{
+    width: 100%;
+    height: auto;
+    border-radius: .25rem;
+    border: .6rem solid rgb(114 226 174 / .2);
+    position: relative;
+}
+.border img{
+    width: 100%;
+    vertical-align: top;
+}
+.border .bullet{
+    height: .6rem;
+    width: 5rem;
+    border-radius: 50px;
+    background: linear-gradient(to Right, transparent 35%, var(--green));
+    position: absolute;
+    top: -.6rem;
+    left: -.6rem;
+}
+.border .bullet:nth-child(1){
+    animation: transChild1 2.5s linear infinite;
+}
+@keyframes transChild1 {
+    From{
+        left: -.6rem;
+    }
+    To{
+        left: calc(100% - 4.4rem);
+    }
+}
+.border .bullet:nth-child(2){
+    width: .6rem;
+    height: 5rem;
+    right: -.6rem;
+    left: unset;
+    background: linear-gradient(to Bottom, transparent 35%, var(--green));
+    animation: transChild2 2.5s linear infinite;
+}
+@keyframes transChild2 {
+    From{
+        top: -.6rem;
+    }
+    To{
+        top: calc(100% - 4.4rem);
+    }
+}
+.border .bullet:nth-child(3){
+    bottom: -.6rem;
+    top: unset;
+    right: -.6rem;
+    left: unset;
+    background: linear-gradient(to Left, transparent 35%, var(--green));
+    animation: transChild3 2.5s linear infinite;
+}
+@keyframes transChild3 {
+    From{
+        right: -.6rem;
+    }
+    To{
+        right: calc(100% - 4.4rem);
+    }
+}
+.border .bullet:nth-child(4){
+    width: .6rem;
+    height: 5rem;
+    bottom: -.6rem;
+    top: unset;
+    background: linear-gradient(to Top, transparent 35%, var(--green));
+    animation: transChild4 2.5s linear infinite;
+}
+@keyframes transChild4 {
+    From{
+        bottom: -.6rem;
+    }
+    To{
+        bottom: calc(100% - 4.4rem);
+    }
+}
+
+.details{
+    color: #ffffff;
+}
+.details h3{
+    font-size: var(--small-11);
+}
+.details h3 span{
+    color: var(--green);
+}
+.details ul{
+    font-size: var(--small-1);
+    text-transform: capitalize;
+    margin-top: 1rem;
+}
+.details ul li{
+    line-height: 2.5rem;
+    color: var(--green);
+    list-style: disc inside;
+}
+.details ul li strong{
+    width: 8rem;
+    display: inline-block;
+    color: var(--lightBlue);
+    font-weight: 500;
+}
+.details ul li span{
+    color: var(--lightBlue);
+}
+.details ul li span::before{
+    content: ":";
+    margin-right: .5rem;
+}
+.details button{
+    margin-top: 1.5rem;
+}
+.details ul li.age span{
+    text-transform: lowercase;
+}

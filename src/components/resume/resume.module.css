@@ -8,7 +8,7 @@
 
     --pointLineWidth: .3rem;
     --minimumYearWidth: 117px;
-    --timeLineGap: 5rem;
+    --timeLineGap: 6rem;
     --pointCircleSize: 1rem;
 }
 /* .resumeWrapper .education,.resumeWrapper .experience{
@@ -64,7 +64,7 @@
     position: absolute;
     --v1: calc(var(--minimumYearWidth) + var(--timeLineGap) / 2);
     left: calc( var(--v1) - var(--pointCircleSize) / 2 - var(--pointLineWidth) / 2);
-    top: calc(50% - .65rem);
+    top: 0;
     z-index: 2;
 }
 /* .resumeWrapper .activity{
@@ -83,7 +83,7 @@
     --width: calc(var(--timeLineGap) - 1rem);
     width: calc(var(--timeLineGap) - 1rem);
     height: var(--pointLineWidth);
-    left: calc(var(--timeLineGap) / 2 * -1 - var(--width) / 2 + var(--pointLineWidth) / 2);
+    left: calc(var(--timeLineGap) / 2 * -1 + var(--pointLineWidth) / 2 - var(--width) / 2);
     top: calc(50% - var(--pointLineWidth) / 2);
     background-color: var(--lightGrey);
     border-radius: 50px;

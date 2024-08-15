@@ -1,0 +1,43 @@
+.contact h2::before{
+    content: "Contact";
+}
+.contact h5{
+    color: #ffffff;
+    font-size: var(--small-1);
+}
+.contact .details h5{
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+.contact p,.contact address{
+    color: var(--lightBlue);
+    font-size: var(--small);
+    line-height: 2rem;
+    transition: color 250ms;
+}
+.contact address{
+    font-style: normal;
+}
+.contact .details address:not(.address address):hover{
+    color: var(--green);
+}
+.contact figure > *{
+    font-size: var(--small-15);
+    color: var(--green);
+}
+.contact figure{
+    background-color: var(--lightGreen);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    place-content: center;
+}
+.contact .details{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--tileBlue);
+    box-shadow: var(--smokeShadow);
+}

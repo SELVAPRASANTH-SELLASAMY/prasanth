@@ -38,13 +38,13 @@
     color: var(--green);
 }
 .serviceTile h4{
-    font-size: var(--small-15);
+    font-size: var(--small-1);
     color: #ffffff;
     font-weight: 500;
     margin: 1rem 0;
 }
 .serviceTile p{
-    font-size: var(--small-1);
+    font-size: var(--small);
     color: var(--lightBlue);
     line-height: 2rem;
     /* text-align: justify; */

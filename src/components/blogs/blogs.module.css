@@ -19,7 +19,7 @@
 .blogTile figure img{
     width: 100%;
     aspect-ratio: 2 / 1;
-    transition: 250ms;
+    transition: 500ms;
     vertical-align: middle;
     cursor: pointer;
 }

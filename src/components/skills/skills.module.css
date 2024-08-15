@@ -39,7 +39,7 @@
 }
 .skillTile svg text{
     fill: var(--lightBlue);
-    font-size: var(--small);
+    font-size: var(--x-small);
 }
 p.skillName strong{
     color: #ffffff;

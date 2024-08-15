@@ -1,0 +1,61 @@
+.blogs h2::before{
+    content: "blogs";
+}
+.blogs .blogSwiper{
+    position: relative;
+}
+.blogs .blogTile{
+    width: 420px;
+    padding: 1rem;
+    background-color: var(--tileBlue);
+    border-radius: .5rem;
+    box-shadow: var(--smokeShadow);
+}
+.blogTile figure{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.blogTile figure img{
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    transition: 250ms;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.blogTile figure img:hover{
+    transform: scale(1.1);
+}
+.blogTile h5{
+    font-size: var(--small-1);
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 1rem;
+}
+.blogTile p{
+    font-size: var(--small);
+    color: var(--lightBlue);
+    margin-top: .5rem;
+}
+.blogTile .dateIndicator{
+    color: #000000;
+    background-color: var(--green);
+    border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding: .5rem;
+    width: 4rem;
+    text-transform: uppercase;
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+}
+.dateIndicator span.month, .dateIndicator span.year{
+    font-size: var(--small);
+}
+.dateIndicator span.date{
+    font-size: var(--small-1);
+    font-weight: 600;
+}

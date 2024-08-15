@@ -1,0 +1,36 @@
+.swiper{
+    width: 100%;
+    position: unset;
+}
+.swiper-wrapper{
+    width: fit-content;
+    margin: 0 .5rem;
+}
+.swiper-slide{
+    width: 420px;
+}
+.swiper-slide:last-child{
+    margin-right: 1rem;
+}
+.swiper-button-next,.swiper-button-prev{
+    color: #ffffff;
+    padding: .5rem;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: .1rem solid var(--lightBlue);
+    transition: 250ms;
+}
+.swiper-button-next{
+    right: -3rem;
+}
+.swiper-button-prev{
+    left: -3rem;
+}
+.swiper-button-next::after,.swiper-button-prev::after{
+    font-size: 95%;
+}
+.swiper-button-next:hover,.swiper-button-prev:hover{
+    color: var(--green);
+    border-color: var(--green);
+}

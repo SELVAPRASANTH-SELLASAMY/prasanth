@@ -1,0 +1,44 @@
+.reviews h2::before{
+    content: "reviews";
+}
+.reviewSwiper{
+    position: relative;
+}
+.reviews .reviewTile{
+    /* width: 100%; */
+    background-color: var(--tileBlue);
+    box-shadow: var(--smokeShadow);
+    position: relative;
+    padding: 1rem;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-radius: .5rem;
+}
+.reviews .reviewTile img{
+    width: 5rem;
+    border-radius: 50%;
+    border: .25rem solid var(--green);
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: -3rem;
+    left: 1.5rem;
+}
+.reviews .reviewTile h5{
+    font-size: var(--small-1);
+    color: #ffffff;
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+.reviews .reviewTile p.org{
+    color: var(--lightBlue);
+}
+.reviews .reviewTile .rating{
+    color: #FFDF00;
+    font-size: var(--small-15);
+    line-height: 3rem;
+}
+.reviews .reviewTile .comment{
+    color: var(--lightBlue);
+    font-size: var(--small);
+    line-height: 1.65rem;
+}

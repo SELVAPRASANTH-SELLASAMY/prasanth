@@ -16,19 +16,14 @@
     border-radius: .25rem;
     cursor: pointer;
 }
-.works .activeTab{
-    color: var(--commonBg);
-    background-color: var(--green);
-}
 .workList{
     margin-top: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(420px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
     gap: 2.5rem;
 }
 .workList .workDefinition{
-    width: 420px;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: .5rem;
     background-color: var(--tileBlue);
     box-shadow: var(--smokeShadow);
@@ -44,6 +39,7 @@
 .workList .workDefinition figure{
     position: relative;
     overflow: hidden;
+    padding: .5rem;
 }
 .workList .workDefinition figure img{
     vertical-align: middle;
@@ -51,27 +47,30 @@
 .workList .workDefinition h5{
     color: #ffffff;
     font-size: var(--small-1);
-    line-height: 2rem;
+    /* line-height: 2rem; */
     font-weight: 500;
     margin-top: 1rem;
+    padding: 0 .5rem;
 }
 .workList .workDefinition p{
     color: var(--lightBlue);
     font-size: var(--small);
+    margin-top: .5rem;
+    padding: 0 .5rem;
 }
 .workList .hoverContent{
     background-color: #0f172acc;
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0;
-    left: -100%;
+    top: 100%;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     backdrop-filter: blur(5px);
-    transition: left 500ms;
+    transition: 500ms;
 }
 .workList .hoverContent > *{
     background-color: var(--green);
@@ -80,7 +79,8 @@
     width: 2.5rem;
     padding: .5rem;
     cursor: pointer;
+    overflow: initial;
 }
 .workList .workDefinition:hover .hoverContent{
-    left: 0;
+    top: 0;
 }

@@ -59,7 +59,7 @@ function Works(){
     
     return(
         <section className={workStyle.works}>
-            <h2>My Works</h2>
+            <h2>My Works <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <ul>
                 {
                     ['All','HTML & CSS','React Js','PHP & MySQL','JavaScript'].map((list,index)=>(

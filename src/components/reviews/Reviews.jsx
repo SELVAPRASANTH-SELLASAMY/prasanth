@@ -69,7 +69,7 @@ function Reviews(){
 
     return(
         <section className={reviewStyle.reviews}>
-            <h2>Client Reviews</h2>
+            <h2>Client Reviews <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={reviewStyle.reviewSwiper}>
                 <Swiper
                 spaceBetween={25}

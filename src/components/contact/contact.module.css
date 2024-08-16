@@ -108,15 +108,9 @@
     margin-bottom: 3rem;
     position: relative;
 }
-.contact p.slogan::after{
-    content: "";
-    height: .3rem;
-    width: 5rem;
-    background-color: var(--lightGreen);
-    border-radius: 50px;
-    position: absolute;
+.contact p.slogan span{
     left: 0;
-    bottom: calc(-1 * 1.5rem + 0.15rem);
+    bottom: calc(-1 * 1.5rem + 0.2rem);
 }
 .contact form textarea::-webkit-scrollbar{
     width: 0;

@@ -58,7 +58,7 @@ function Blogs(){
 
     return(
         <section className={blogStyle.blogs}>
-            <h2>Latest blogs</h2>
+            <h2>Latest blogs <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={blogStyle.blogSwiper}>
                 <Swiper
                 spaceBetween={25}

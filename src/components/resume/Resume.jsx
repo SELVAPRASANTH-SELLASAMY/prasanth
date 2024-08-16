@@ -31,7 +31,7 @@ function Resume(){
     ]
     return(
         <section className={resumeStyle.resume}>
-            <h2>My Resume</h2>
+            <h2>My Resume <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={resumeStyle.resumeWrapper}>
                 <div className={resumeStyle.education}>
                     <h4><span>{<RiBook2Line/>}</span>Edcational Qualification</h4>

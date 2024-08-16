@@ -16,7 +16,7 @@ function Home(){
                 clearInterval(typingInterval);
                 typingCursor.current && typingCursor.current.classList.add(homeStyle.pausetyping);
                 setTimeout(()=>{
-                    typingCursor.current.classList.remove(homeStyle.pausetyping);
+                    typingCursor.current && typingCursor.current.classList.remove(homeStyle.pausetyping);
                     deleteInterval = setInterval(Delete,50);
                 },3000);
             }

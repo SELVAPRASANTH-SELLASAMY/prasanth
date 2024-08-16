@@ -60,7 +60,7 @@ function Skills(){
     ]
     return(
         <section className={skillStyle.skill}>
-            <h2>My Skills</h2>
+            <h2>My Skills <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={skillStyle.techContainer}>
                 {
                     skillArray.map((tech,index)=>(

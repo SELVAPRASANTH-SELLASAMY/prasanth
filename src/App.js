@@ -4,15 +4,17 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Services/>
-      <Resume/>
-      <Works/>
-      <Reviews/>
-      <Blogs/>
-      <Contact/>
+      <main>
+        <Home/>
+        <About/>
+        <Skills/>
+        <Services/>
+        <Resume/>
+        <Works/>
+        <Reviews/>
+        <Blogs/>
+        <Contact/>
+      </main>
       <Footer/>
     </div>
   );

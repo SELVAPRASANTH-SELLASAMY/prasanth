@@ -72,6 +72,31 @@ h2::before{
     opacity: .05;
     z-index: -1;
 }
+span.bottomLine{
+    width: 10rem;
+    height: .4rem;
+    border-radius: 50px;
+    background-color: var(--lightGreen);
+    position: absolute;
+    bottom: -2rem;
+    left: calc(50% - 5rem);
+    display: block;
+    overflow: hidden;
+}
+span.movingBall{
+    height: .4rem;
+    width: .4rem;
+    border-radius: 50px;
+    background-color: var(--green);
+    position: absolute;
+    left: -.4rem;
+    top: 0;
+    animation: rollBall 3s ease-in-out infinite normal;
+}
+@keyframes  rollBall{
+    From{left: -.4rem;}
+    To{left: 100%;}
+}
 ::-webkit-scrollbar{
     width: .5rem;
     background-color: grey;

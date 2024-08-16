@@ -11,7 +11,7 @@ function About(){
     },[]);
     return(
         <section className={aboutStyle.about}>
-            <h2>About Me</h2>
+            <h2>About Me <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={aboutStyle.info}>
                 <div className={aboutStyle.border}>
                     <span className={aboutStyle.bullet}></span>

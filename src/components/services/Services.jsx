@@ -15,7 +15,7 @@ function Services(){
     ];
     return(
         <section className={serviceStyle.services}>
-            <h2>My Services</h2>
+            <h2>My Services <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={serviceStyle.serviceContainer}>
                 {
                     serviceContent.map((serv,index)=>(

@@ -8,3 +8,4 @@ export {default as Works} from './works/Works';
 export {default as Reviews} from './reviews/Reviews';
 export {default as Blogs} from './blogs/Blogs';
 export {default as Contact} from './contact/Contact';
+export {default as Footer} from './footer/Footer';

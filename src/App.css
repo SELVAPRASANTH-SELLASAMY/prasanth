@@ -19,7 +19,7 @@
     --xx-large: 8rem;
     --line-height-p: 1.6rem;
 }
-header,section{
+header,section,footer{
     padding: 0 5%;
 }
 section{

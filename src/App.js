@@ -1,5 +1,5 @@
 import './App.css';
-import { Navbar, Home, About, Skills, Services, Resume, Works, Reviews, Blogs, Contact } from './components';
+import { Navbar, Home, About, Skills, Services, Resume, Works, Reviews, Blogs, Contact, Footer } from './components';
 function App() {
   return (
     <div className="App">
@@ -13,6 +13,7 @@ function App() {
       <Reviews/>
       <Blogs/>
       <Contact/>
+      <Footer/>
     </div>
   );
 }

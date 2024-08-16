@@ -1,8 +1,8 @@
-import React from 'react';
 import homeStyle from './home.module.css';
 import avatar from '../../assets/avatar.jpg';
-import { RiFacebookFill, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill, RiArrowDownLine, RiWhatsappFill } from "react-icons/ri";
+import { RiArrowDownLine} from "react-icons/ri";
 import { useEffect, useRef, useState } from 'react';
+import Socialprofiles from '../socialprofile/Socialprofiles';
 function Home(){
     const content = ['Selvaprasanth','Full-stack Developer'];
     const typingCursor = useRef();
@@ -39,17 +39,6 @@ function Home(){
             deleteInterval && clearInterval(deleteInterval);
         }
     }
-    const socialMediasArray = [<RiFacebookFill/>,<RiWhatsappFill/>,<RiTwitterXFill/>,<RiGithubFill/>,<RiLinkedinBoxFill/>];
-    const renderSocialMedias = () => {
-        const icons = socialMediasArray.map((icon,index)=>(
-            <div key={index} className={homeStyle.mediaIcon}>
-                {Array.from({length:2},(_,index)=>(
-                    React.cloneElement(icon,{key:index})
-                ))}
-            </div>
-        ));
-        return [...icons];
-    }
     useEffect(()=>{
         handleType();
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -59,9 +48,7 @@ function Home(){
             <img src={avatar} alt="Avatar" />
             <h1>Hi, I am <span>{contentState}</span><span ref={typingCursor}  className={homeStyle.typingCursor}>|</span></h1>
             <p>I am a full-stack web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.</p>
-            <div className={homeStyle.socialMedias}>
-                {renderSocialMedias()}
-            </div>
+            <Socialprofiles/>
             <p className={homeStyle.scrollDown}><span><RiArrowDownLine/></span>Scroll down</p>
         </section>
     );

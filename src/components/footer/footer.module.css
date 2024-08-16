@@ -1,0 +1,14 @@
+footer{
+    padding: 1rem 5%;
+    box-shadow: var(--smokeShadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p.copyright{
+    font-size: var(--small);
+    color: var(--lightBlue);
+}
+p.copyright span{
+    color: #ffffff;
+}

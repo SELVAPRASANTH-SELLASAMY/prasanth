@@ -42,12 +42,12 @@
     color: #ffffff;
     font-weight: 500;
     margin: 1rem 0;
+    margin-top: 1.5rem;
 }
 .serviceTile p{
     font-size: var(--small);
     color: var(--lightBlue);
-    line-height: 2rem;
-    /* text-align: justify; */
+    line-height: var(--line-height-p);
 }
 .serviceTile:hover{
     transform: translateY(-.5rem);

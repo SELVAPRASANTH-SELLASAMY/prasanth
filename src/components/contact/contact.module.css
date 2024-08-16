@@ -1,24 +1,41 @@
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+}
+.contact h2{
+    grid-column: span 2;
+}
 .contact h2::before{
     content: "Contact";
 }
-.contact h5{
+.contact h4{
     color: #ffffff;
-    font-size: var(--small-1);
+    font-size: var(--small-15);
+    line-height: 2.5rem;
 }
 .contact .details h5{
+    color: #ffffff;
+    font-size: var(--small-1);
     font-weight: 500;
     margin-bottom: .5rem;
 }
 .contact p,.contact address{
     color: var(--lightBlue);
     font-size: var(--small);
-    line-height: 2rem;
+    line-height: var(--line-height-p);
     transition: color 250ms;
 }
 .contact address{
     font-style: normal;
 }
-.contact .details address:not(.address address):hover{
+.contact address a{
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    display: block;
+}
+.contact .details address a:hover{
     color: var(--green);
 }
 .contact figure > *{
@@ -36,8 +53,71 @@
 .contact .details{
     display: flex;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: .5rem;
     background-color: var(--tileBlue);
     box-shadow: var(--smokeShadow);
+    margin: 1.5rem 0;
+}
+.contact .details:last-child{
+    margin-bottom: 0;
+}
+.contact form{
+    background-color: var(--tileBlue);
+    border-radius: .5rem;
+    padding: 2rem 1.5rem;
+    box-shadow: var(--smokeShadow);
+}
+.contact form label{
+    color: #ffffff;
+    font-size: var(--small);
+}
+.contact form input,form textarea{
+    color: var(--lightBlue);
+    font-size: var(--small);
+    width: 100%;
+    padding: .8rem 1rem;
+    outline: none;
+    border: none;
+    box-shadow: var(--smokeShadow);
+    border-radius: .25rem;
+    background-color: transparent;
+    margin: 1rem 0;
+    margin-bottom: 1.5rem;
+    caret-color: var(--lightBlue);
+    border: .1rem solid transparent;
+    transition: border-color 250ms;
+}
+.contact form textarea{
+    font: inherit;
+    resize: vertical;
+    margin-bottom: 0;
+    height: 5rem;
+}
+.contact form input:focus,.contact form textarea:focus{
+    border-color: var(--green);
+}
+.contact ::placeholder{
+    color: var(--lightBlue);
+    opacity: .5;
+}
+.contact button{
+    margin-top: 1rem;
+}
+.contact p.slogan{
+    margin-bottom: 3rem;
+    position: relative;
+}
+.contact p.slogan::after{
+    content: "";
+    height: .3rem;
+    width: 5rem;
+    background-color: var(--lightGreen);
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    bottom: calc(-1 * 1.5rem + 0.15rem);
+}
+.contact form textarea::-webkit-scrollbar{
+    width: 0;
 }

@@ -96,7 +96,7 @@
 .resumeWrapper p.activityInfo{
     color: var(--lightBlue);
     font-size: var(--small);
-    line-height: 1.5rem;
+    line-height: var(--line-height-p);
     text-align: justify;
 }
 .resumeWrapper abbr{

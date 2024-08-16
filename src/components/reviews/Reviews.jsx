@@ -76,7 +76,7 @@ function Reviews(){
                 slidesPerView={'auto'}
                 modules={[Navigation, Autoplay]}
                 navigation
-                autoplay={true}
+                autoplay={{delay:3000}}
                 >
                 {
                     reviewArray.map((review,index)=>(

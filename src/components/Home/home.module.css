@@ -24,6 +24,7 @@
     font-size: var(--small-1);
     max-width: 950px;
     text-align: center;
+    line-height: var(--line-height-p);
 }
 .home .socialMedias{
     color: var(--lightBlue);

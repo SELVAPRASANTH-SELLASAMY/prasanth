@@ -9,6 +9,7 @@
     --commonBg: #0b1223;
     --smokeShadow: rgba(255, 255, 255, 0.02) 0px 1px 3px 0px, rgba(197, 226, 255, 0.15) 0px 0px 0px 1px;;
     --x-small: .85rem;
+    --x1-small: .9rem;
     --small: 1rem;
     --small-1: 1.25rem;
     --small-15: 1.5rem;
@@ -16,6 +17,7 @@
     --small-2: 2.25rem;
     --medium: 3rem;
     --xx-large: 8rem;
+    --line-height-p: 1.6rem;
 }
 header,section{
     padding: 0 5%;
@@ -25,7 +27,7 @@ section{
     margin-bottom: 5rem;
 }
 button{
-    font-size: var(--small);
+    font-size: var(--x1-small);
     text-transform: uppercase;
     padding: .85rem 1.25rem;
     border-radius: .25rem;
@@ -52,4 +54,12 @@ h2::before{
     text-align: center;
     opacity: .05;
     z-index: -1;
+}
+::-webkit-scrollbar{
+    width: .5rem;
+    background-color: grey;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: rgb(187, 187, 187);
 }

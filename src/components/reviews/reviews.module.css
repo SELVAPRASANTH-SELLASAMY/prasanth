@@ -40,5 +40,5 @@
 .reviews .reviewTile .comment{
     color: var(--lightBlue);
     font-size: var(--small);
-    line-height: 1.65rem;
+    line-height: var(--line-height-p);
 }

@@ -4,7 +4,7 @@
     display: flex;
     gap: 1rem;
 }
-.socialMedias div{
+.socialMedias ul{
     display: flex;
     flex-direction: column;
     height: 40px;
@@ -14,16 +14,16 @@
     box-shadow: var(--smokeShadow);
     background-color: rgb(15 23 42); /*TODO:Can be stored in variable*/
 }
-.socialMedias div :nth-child(even){
+.socialMedias ul :nth-child(even){
     background-color: var(--green);
     color: #000000;
 }
-.socialMedias div > *{
+.socialMedias ul > *{
     min-height: 40px;
     padding: .5rem;
     transition: 500ms;
     border-radius: .25rem;
 }
-.socialMedias div:hover > *{
+.socialMedias ul:hover > *{
     transform: translateY(-40px);
 }

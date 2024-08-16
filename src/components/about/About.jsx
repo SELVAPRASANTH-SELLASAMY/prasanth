@@ -14,10 +14,10 @@ function About(){
             <h2>About Me</h2>
             <div className={aboutStyle.info}>
                 <div className={aboutStyle.border}>
-                    <div className={aboutStyle.bullet}></div>
-                    <div className={aboutStyle.bullet}></div>
-                    <div className={aboutStyle.bullet}></div>
-                    <div className={aboutStyle.bullet}></div>
+                    <span className={aboutStyle.bullet}></span>
+                    <span className={aboutStyle.bullet}></span>
+                    <span className={aboutStyle.bullet}></span>
+                    <span className={aboutStyle.bullet}></span>
                     <img src={AboutImage} alt="About" />
                 </div>
                 <div className={aboutStyle.details}>

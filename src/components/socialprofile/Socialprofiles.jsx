@@ -5,11 +5,11 @@ function Socialprofiles(){
     const socialMediasArray = [<RiFacebookFill/>,<RiWhatsappFill/>,<RiTwitterXFill/>,<RiGithubFill/>,<RiLinkedinBoxFill/>];
     const renderSocialMedias = () => {
         const icons = socialMediasArray.map((icon,index)=>(
-            <div key={index} className={socialStyle.mediaIcon}>
+            <ul key={index} className={socialStyle.mediaIcon}>
                 {Array.from({length:2},(_,index)=>(
                     React.cloneElement(icon,{key:index})
                 ))}
-            </div>
+            </ul>
         ));
         return [...icons];
     }

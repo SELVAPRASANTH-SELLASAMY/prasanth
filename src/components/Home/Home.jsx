@@ -14,7 +14,7 @@ function Home(){
         const type = () => {
             if(wordIndex === content[contentIndex].length - 1){
                 clearInterval(typingInterval);
-                typingCursor.current.classList.add(homeStyle.pausetyping);
+                typingCursor.current && typingCursor.current.classList.add(homeStyle.pausetyping);
                 setTimeout(()=>{
                     typingCursor.current.classList.remove(homeStyle.pausetyping);
                     deleteInterval = setInterval(Delete,50);

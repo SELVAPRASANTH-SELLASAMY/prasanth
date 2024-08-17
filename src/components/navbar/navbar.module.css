@@ -26,11 +26,16 @@ nav{
     text-transform: uppercase;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 1rem;
 }
 nav ol{
     display: inherit;
     list-style: decimal-leading-zero;
-    gap: 3.5rem;
+    list-style-position: inside;
+    width: inherit;
+    justify-content: space-between;
 }
 nav ol li{
     color: var(--green);

@@ -42,3 +42,9 @@
     font-size: var(--small);
     line-height: var(--line-height-p);
 }
+
+@media screen and (width <= 1000px){
+    .reviews{
+        margin-bottom: 8rem;
+    }
+}

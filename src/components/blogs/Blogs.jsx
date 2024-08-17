@@ -62,7 +62,7 @@ function Blogs(){
             <div className={blogStyle.blogSwiper}>
                 <Swiper
                 spaceBetween={25}
-                slidesPerView={'auto'}
+                slidesPerView={ window.innerWidth <= 550 ? 1 : 'auto'}
                 modules={[Navigation, Autoplay]}
                 navigation
                 autoplay={{delay:4000}}

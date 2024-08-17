@@ -63,3 +63,9 @@
         transform: scale(1);
     }
 }
+
+@media screen and (width <= 768px) {
+    .serviceContainer{
+        grid-template-columns: 1fr;
+    }
+}

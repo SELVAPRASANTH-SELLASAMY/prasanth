@@ -21,7 +21,7 @@
 }
 .skillTile svg{
     vertical-align: top;
-    width: 80%;
+    width: 15rem;
 }
 .skillTile svg circle{
     fill: none;
@@ -39,7 +39,7 @@
 }
 .skillTile svg text{
     fill: var(--lightBlue);
-    font-size: var(--x-small);
+    font-size: var(--x-small-1);
 }
 p.skillName strong{
     color: #ffffff;
@@ -64,7 +64,7 @@ p.skillName{
     appearance: none;
     border-radius: 50px;
     width: 100%;
-    height: 1.15rem;
+    height: 1rem;
 }
 .progressBarContainer progress[value]::-webkit-progress-bar{
     background: var(--lightGreen);
@@ -82,4 +82,9 @@ p.skillName{
 }
 .progressBarContainer label span{
     color: var(--green);
+}
+@media screen and (width <= 695px) {
+    .progressBarContainer{
+        grid-template-columns: 1fr;
+    }
 }

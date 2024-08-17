@@ -1,6 +1,6 @@
 .about .info{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(425px,1fr));
     gap: 2rem;
     align-items: center;
 }
@@ -124,4 +124,10 @@
 }
 .details ul li.age span{
     text-transform: lowercase;
+}
+
+@media screen and (width <= 769px) {
+    .about .info{
+        grid-template-columns: 1fr;
+    }
 }

@@ -12,3 +12,10 @@ p.copyright{
 p.copyright span{
     color: #ffffff;
 }
+
+@media screen and (width <= 720px) {
+    footer{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

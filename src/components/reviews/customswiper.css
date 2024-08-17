@@ -1,10 +1,10 @@
 .swiper{
     width: 100%;
     position: unset;
+    padding: .25rem;
 }
 .swiper-wrapper{
     width: fit-content;
-    margin: 0 .5rem;
 }
 .swiper-slide{
     width: 420px;
@@ -33,4 +33,26 @@
 .swiper-button-next:hover,.swiper-button-prev:hover{
     color: var(--green);
     border-color: var(--green);
+}
+
+@media screen and (width <= 1000px) {
+    .swiper-button-next,.swiper-button-prev{
+        bottom: -3.5rem;
+        top: unset;
+    }
+    .swiper-button-next{
+        right: calc(50% - 3rem);
+    }
+    .swiper-button-prev{
+        left: calc(50% - 3rem);
+    }
+}
+
+@media screen and (width <= 550px) {
+    .swiper-slide{
+        width: unset;
+    }
+    .swiper-wrapper{
+        margin: 0;
+    }
 }

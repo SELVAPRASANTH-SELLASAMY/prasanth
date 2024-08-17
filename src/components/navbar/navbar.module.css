@@ -10,6 +10,17 @@
     width: 100%;
     z-index: 100;
 }
+.navbar .hamburger{
+    color: var(--green);
+    font-size: 3rem;
+    background-color: var(--tileBlue);
+    padding: .5rem;
+    box-shadow: var(--smokeShadow);
+    border-radius: .25rem;
+    position: absolute;
+    right: 2rem;
+    display: none;
+}
 .navbar h1{
     font-size: var(--small-2);
     color: var(--green);
@@ -36,6 +47,7 @@ nav ol{
     list-style-position: inside;
     width: inherit;
     justify-content: space-between;
+    flex-direction: inherit;
 }
 nav ol li{
     color: var(--green);
@@ -56,10 +68,55 @@ nav ol li::after{
 nav ol li:hover > a{
     color: var(--green);
 }
-nav ol li:hover::after{
-    width: 100%;
-}
 nav ol li a{
     color: #ffffff;
     text-decoration: none;
+}
+nav > button{
+    display: none;
+}
+
+@media screen and (width > 950px) {
+    nav ol li:hover::after{
+        width: 100%;
+    }
+}
+
+@media screen and (width <= 950px) {
+    .navbar .hamburger{
+        display: block;
+    }
+    nav{
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: -100vh;
+        height: 100vh;
+        width: 100%;
+        max-width: unset;
+        margin: unset;
+        background-color: var(--tileBlue);
+        justify-content: center;
+        transition: 250ms;
+    }
+    .showNavbar{
+        top: 0;
+    }
+    nav ol li{
+        /* background-color: green; */
+        text-align: center;
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-radius: .5rem;
+    }
+    nav ol li:hover{
+        background-color: var(--lightGreen);
+    }
+    nav > button{
+        display: block;
+        margin-top: 1rem;
+    }
+    .navbar > button{
+        display: none;
+    }
 }

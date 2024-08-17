@@ -115,3 +115,15 @@
 .contact form textarea::-webkit-scrollbar{
     width: 0;
 }
+
+@media screen and (width <= 950px) {
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    .contact h2{
+        grid-column: unset;
+    }
+    .contact form{
+        margin-top: 1.5rem;
+    }
+}

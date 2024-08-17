@@ -48,7 +48,7 @@ function Home(){
             <figure>
                 <img src={avatar} alt="Avatar" />
             </figure>
-            <h1>Hi, I am <span>{contentState}</span><span ref={typingCursor}  className={homeStyle.typingCursor}>|</span></h1>
+            <h1>Hi, I am <span>{contentState}<span ref={typingCursor}  className={homeStyle.typingCursor}>|</span> </span></h1>
             <p>I am a full-stack web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.</p>
             <Socialprofiles/>
             <p className={homeStyle.scrollDown}><span><RiArrowDownLine/></span>Scroll down</p>

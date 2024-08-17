@@ -3,7 +3,7 @@
 }
 .resumeWrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
     gap: 2.5rem;
 
     --pointLineWidth: .3rem;
@@ -67,9 +67,6 @@
     top: 0;
     z-index: 2;
 }
-/* .resumeWrapper .activity{
-
-} */
 .resumeWrapper h5.field{
     color: var(--green);
     font-size: var(--small-1);
@@ -101,4 +98,27 @@
 }
 .resumeWrapper abbr{
     text-decoration: none;
+}
+
+@media screen and (width <= 695px) {
+    .resumeWrapper{
+        grid-template-columns: 1fr;
+    }
+    .resumeWrapper .timeline{
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 2.5rem;
+    }
+    .resumeWrapper .timeline::before{
+        left: -2.5rem;
+    }
+    .resumeWrapper .year::after{
+        --v1: calc(var(--pointCircleSize) / 2 * -1 - var(--pointLineWidth) / 2);
+        left: calc(var(--v1) - 2.5rem);
+    }
+    .resumeWrapper h5.field::before{
+        width: 2rem;
+        top: -2rem;
+        left: -2.5rem;
+    }
 }

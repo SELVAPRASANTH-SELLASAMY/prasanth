@@ -59,3 +59,9 @@
     font-size: var(--small-1);
     font-weight: 600;
 }
+
+@media screen and (width <= 1000px){
+    .blogs{
+        margin-bottom: 8rem;
+    }
+}

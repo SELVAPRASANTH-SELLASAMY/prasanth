@@ -107,3 +107,17 @@ span.movingBall{
     border-radius: 50px;
     background-color: rgb(187, 187, 187);
 }
+
+@media screen and (width <= 695px) {
+    h2::before{
+        display: none;
+    }
+}
+
+@media screen and (width <= 550px){
+    :root{
+        --medium: 2rem;
+        --small-1: 1.1rem;
+        --small: .9rem;
+    }
+}

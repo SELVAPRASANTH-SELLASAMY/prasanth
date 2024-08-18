@@ -65,10 +65,10 @@ nav ol li::after{
     bottom: -.5rem;
     transition: 250ms;
 }
-nav ol li:hover > a{
+nav ol li:hover > span{
     color: var(--green);
 }
-nav ol li a{
+nav ol li span{
     color: #ffffff;
     text-decoration: none;
 }

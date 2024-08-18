@@ -4,7 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { AppContext } from '../../App';
+import { useContext } from 'react';
 function Blogs(){
+    const {blogRef} = useContext(AppContext);
     const blogContent = [
         {
             image:sampleImage,
@@ -57,7 +60,7 @@ function Blogs(){
     ];
 
     return(
-        <section className={blogStyle.blogs}>
+        <section name='blogs' ref={blogRef} className={blogStyle.blogs}>
             <h2>Latest blogs <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={blogStyle.blogSwiper}>
                 <Swiper

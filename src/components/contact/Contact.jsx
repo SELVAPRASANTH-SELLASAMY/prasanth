@@ -1,9 +1,12 @@
 import contactStyle from './contact.module.css';
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
+import { AppContext } from '../../App';
+import { useContext } from 'react';
 function Contact(){
+    const {contactRef} = useContext(AppContext);
     return(
-        <section className={contactStyle.contact}>
+        <section name='contact' ref={contactRef} className={contactStyle.contact}>
             <h2>Contact Me <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={contactStyle.contactInformation}>
                 <h4>Contact Information</h4>

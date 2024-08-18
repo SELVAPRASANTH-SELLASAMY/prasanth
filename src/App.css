@@ -25,6 +25,7 @@ header,section,footer{
 section{
     font-family: sans-serif;
     margin-bottom: 5rem;
+    scroll-margin: 100px;
 }
 button{
     font-size: var(--x1-small);

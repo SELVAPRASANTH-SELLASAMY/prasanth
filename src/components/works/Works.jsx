@@ -5,8 +5,10 @@ import zukoImage from '../../assets/zukoCoffee.png';
 import portfolioImage from '../../assets/portfolio.png';
 import { RiImageLine, RiCodeSSlashLine } from "react-icons/ri";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { AppContext } from '../../App';
 function Works(){
+    const {worksRef} = useContext(AppContext);
     const workContent = [
         {
             image:cgsImage,
@@ -58,7 +60,7 @@ function Works(){
     }
     
     return(
-        <section className={workStyle.works}>
+        <section name='works' ref={worksRef} className={workStyle.works}>
             <h2>My Works <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <ul>
                 {

@@ -1,8 +1,10 @@
 import aboutStyle from './about.module.css';
 import AboutImage from '../../assets/about-image.webp';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { AppContext } from '../../App';
 function About(){
     const [age,setAge] = useState("");
+    const {aboutRef} = useContext(AppContext);
     useEffect(()=>{
         const date = new Date();
         const year = date.getFullYear() - 2003;
@@ -10,7 +12,7 @@ function About(){
         setAge(year+" years "+month+` month${month > 1 ? 's' : ""}`);
     },[]);
     return(
-        <section className={aboutStyle.about}>
+        <section name='about' ref={aboutRef} className={aboutStyle.about}>
             <h2>About Me <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={aboutStyle.info}>
                 <div className={aboutStyle.border}>

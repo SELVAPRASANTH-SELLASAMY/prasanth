@@ -1,9 +1,11 @@
 import homeStyle from './home.module.css';
 import avatar from '../../assets/avatar.jpg';
 import { RiArrowDownLine} from "react-icons/ri";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import Socialprofiles from '../socialprofile/Socialprofiles';
+import { AppContext } from '../../App';
 function Home(){
+    const {homeRef} = useContext(AppContext);
     const content = ['Selvaprasanth','Full-stack Developer'];
     const typingCursor = useRef();
     const [contentState,setContentState] = useState("");
@@ -44,7 +46,7 @@ function Home(){
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
     return(
-        <section className={homeStyle.home}>
+        <section name='home' ref={homeRef} className={homeStyle.home}>
             <figure>
                 <img src={avatar} alt="Avatar" />
             </figure>

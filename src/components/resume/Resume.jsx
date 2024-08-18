@@ -1,6 +1,9 @@
 import resumeStyle from './resume.module.css';
 import { RiBook2Line, RiShoppingBagLine } from "react-icons/ri";
+import { AppContext } from '../../App';
+import { useContext } from 'react';
 function Resume(){
+    const {resumeRef} = useContext(AppContext);
     const educationContent = [
         {
             year:"2020 - 2024",
@@ -28,9 +31,9 @@ function Resume(){
             org:"Applied Materials India Pvt Ltd.",
             info:"Got this Intern cum Fulltime opportunity via college placement. During this period (Mar 2024 - May 2024) I've worked as a part of QA department in which I've explored various manual testing tools used by AMAT. I've also involved in few Java automation tasks."
         }
-    ]
+    ];
     return(
-        <section className={resumeStyle.resume}>
+        <section name='resume' ref={resumeRef} className={resumeStyle.resume}>
             <h2>My Resume <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={resumeStyle.resumeWrapper}>
                 <div className={resumeStyle.education}>

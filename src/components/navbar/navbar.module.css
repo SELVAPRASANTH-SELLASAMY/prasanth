@@ -72,8 +72,11 @@ nav ol li span{
     color: #ffffff;
     text-decoration: none;
 }
-nav > button{
+nav ol button{
     display: none;
+}
+.active > span{
+    color: var(--green);
 }
 
 @media screen and (width > 950px) {
@@ -96,25 +99,34 @@ nav > button{
         max-width: unset;
         margin: unset;
         background-color: var(--tileBlue);
-        justify-content: center;
+        justify-content: flex-start;
         transition: 500ms;
+        overflow: auto;
+    }
+    nav::-webkit-scrollbar{
+        width: 0;
+    }
+    nav ol{
+        min-height: 470px;
+        margin: 80px 0;
+        align-items: center;
+        /* justify-content: flex-start; */
     }
     .showNavbar{
         top: 0;
     }
     nav ol li{
-        /* background-color: green; */
+        width: 95%;
         text-align: center;
         padding: 1rem 0;
-        margin: .5rem 1rem;
+        margin: .5rem 0;
         border-radius: .5rem;
     }
-    nav ol li:hover{
+    .active{
         background-color: var(--lightGreen);
     }
-    nav > button{
+    nav ol button{
         display: block;
-        margin-top: 1rem;
     }
     .navbar > button{
         display: none;

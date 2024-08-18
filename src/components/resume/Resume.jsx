@@ -6,7 +6,7 @@ function Resume(){
             year:"2020 - 2024",
             field:"Bachelor of Engineering",
             org:"Kongu Engineering College, Erode.",
-            info:`Started my Engineering journey in "Mechanical Engineering" stream. Equiped leadership ability, problem solving ability & fluent communication skill through participation in coding contests, paper presentation & Other club activities such as NSS. I've completed the degree with the CGPA of 7.96.`
+            info:`Started my Engineering journey in "Mechanical Engineering" stream. Equiped leadership ability, problem solving ability & fluent communication skill through participation in coding contests, paper presentation & Other club activities such as NSS. I've completed the degree with the CGPA of 8.16.`
         },
         {
             year:"2018 - 2020",

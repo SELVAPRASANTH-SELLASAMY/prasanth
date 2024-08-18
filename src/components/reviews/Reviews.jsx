@@ -9,7 +9,7 @@ function Reviews(){
     const reviewArray = [
         {
             image:sampleImage,
-            name:"Ana de armus",
+            name:"Steve rogers",
             orgName:"Talent pool",
             orgUrl:"talentpool.com",
             rating:3,
@@ -17,7 +17,7 @@ function Reviews(){
         },
         {
             image:sampleImage,
-            name:"Ana de armus",
+            name:"Steve rogers",
             orgName:"Talent pool",
             orgUrl:"talentpool.com",
             rating:3,
@@ -25,7 +25,7 @@ function Reviews(){
         },
         {
             image:sampleImage,
-            name:"Ana de armus",
+            name:"Steve rogers",
             orgName:"Talent pool",
             orgUrl:"talentpool.com",
             rating:3,
@@ -33,7 +33,7 @@ function Reviews(){
         },
         {
             image:sampleImage,
-            name:"Ana de armus",
+            name:"Steve rogers",
             orgName:"Talent pool",
             orgUrl:"talentpool.com",
             rating:3,
@@ -41,7 +41,7 @@ function Reviews(){
         },
         {
             image:sampleImage,
-            name:"Ana de armus",
+            name:"Steve rogers",
             orgName:"Talent pool",
             orgUrl:"talentpool.com",
             rating:3,
@@ -49,7 +49,7 @@ function Reviews(){
         },
         {
             image:sampleImage,
-            name:"Ana de armus",
+            name:"Steve rogers",
             orgName:"Talent pool",
             orgUrl:"talentpool.com",
             rating:3,

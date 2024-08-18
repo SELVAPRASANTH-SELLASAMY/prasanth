@@ -27,11 +27,11 @@ function Navbar(){
             <nav ref={mobileNavbar}>
                 <ol>
                     <li><a href='#home'>Home</a></li>
-                    <li><a href='#home'>About</a></li>
-                    <li><a href='#home'>Resume</a></li>
-                    <li><a href='#home'>Works</a></li>
-                    <li><a href='#home'>Blog</a></li>
-                    <li><a href='#home'>Contact</a></li>
+                    <li><a href='#about'>About</a></li>
+                    <li><a href='#resume'>Resume</a></li>
+                    <li><a href='#works'>Works</a></li>
+                    <li><a href='#blog'>Blog</a></li>
+                    <li><a href='#contact'>Contact</a></li>
                 </ol>
                 <button>Hire me</button>
             </nav>

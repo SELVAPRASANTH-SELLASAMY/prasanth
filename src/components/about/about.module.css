@@ -131,3 +131,8 @@
         grid-template-columns: 1fr;
     }
 }
+@media screen and (width <= 425px) {
+    .details ul li strong{
+        width: 6rem;
+    }
+}

@@ -24,7 +24,8 @@
     gap: 2.5rem;
 }
 .workList .workDefinition{
-    padding: 1rem;
+    padding: .5rem;
+    padding-bottom: 1rem;
     border-radius: .5rem;
     background-color: var(--tileBlue);
     box-shadow: var(--smokeShadow);

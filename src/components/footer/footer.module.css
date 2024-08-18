@@ -18,4 +18,7 @@ p.copyright span{
         flex-direction: column;
         gap: 1rem;
     }
+    p.copyright{
+        text-align: center;
+    }
 }

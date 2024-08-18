@@ -127,3 +127,19 @@
         margin-top: 1.5rem;
     }
 }
+
+@media screen and (width <= 450px) {
+    .contact figure{
+        min-width: 4rem;
+    }
+}
+@media screen and (width <= 375px){
+    .contact figure{
+        width: 3rem;
+        height: 3rem;
+        min-width: 3rem;
+    }
+    .contact .details{
+        padding: 1rem .5rem;
+    }
+}

@@ -18,7 +18,7 @@
     box-shadow: var(--smokeShadow);
     border-radius: .25rem;
     position: absolute;
-    right: 2rem;
+    right: 5%;
     display: none;
 }
 .navbar h1{
@@ -97,7 +97,7 @@ nav > button{
         margin: unset;
         background-color: var(--tileBlue);
         justify-content: center;
-        transition: 250ms;
+        transition: 500ms;
     }
     .showNavbar{
         top: 0;
@@ -106,7 +106,7 @@ nav > button{
         /* background-color: green; */
         text-align: center;
         padding: 1rem 0;
-        margin: 0 1rem;
+        margin: .5rem 1rem;
         border-radius: .5rem;
     }
     nav ol li:hover{
@@ -118,5 +118,18 @@ nav > button{
     }
     .navbar > button{
         display: none;
+    }
+}
+
+@media screen and (width <= 550px){
+    .navbar{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .navbar h1{
+        font-size: var(--small-15);
+    }
+    .navbar .hamburger{
+        font-size: 2.5rem;
     }
 }

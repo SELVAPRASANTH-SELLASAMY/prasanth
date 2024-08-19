@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import skillStyle from './skills.module.css';
-function Tech({percent,stack}){
+function Tech({percent,stack,interSect}){
     const [percentage,setPercentage] = useState(0);
     const handlePercent = () => {
         var temp = 0;
@@ -10,12 +10,14 @@ function Tech({percent,stack}){
                 clearInterval(incrementInterval);
             }
         }
-        const incrementInterval = setInterval(increment,25);
+        const incrementInterval = setInterval(increment,15);
     }
     useEffect(()=>{
-        handlePercent();
+        if(interSect){
+            handlePercent();
+        }
         //eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]);
+    },[interSect]);
     return(
         <div className={skillStyle.techStacks}>
             <label htmlFor="progress">

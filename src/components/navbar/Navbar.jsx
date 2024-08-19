@@ -40,6 +40,7 @@ function Navbar(){
         [aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef].forEach(section=>{
             Observer.observe(section.current);
         });
+        return ()=> Observer.disconnect();
     },[aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef]);
 
     useEffect(()=>{

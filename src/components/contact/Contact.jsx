@@ -18,8 +18,8 @@ function Contact(){
                     <div className={contactStyle.phone}>
                         <h5>Contact on phone</h5>
                         <address>
-                            <p>+91 9003413727</p>
-                            <p>+91 8903543348</p>
+                            <a href='tel:+919003413727'>+91 9003413727</a>
+                            <a href='tel:+918903543348'>+91 8903543348</a>
                         </address>
                     </div>
                 </div>
@@ -30,8 +30,8 @@ function Contact(){
                     <div className={contactStyle.email}>
                         <h5>Contact on mail</h5>
                         <address>
+                            <a href="mailto:info@selvaprasanth.tech" target='_blank' rel='noreferrer noopener'>info@selvaprasanth.tech</a>
                             <a href="mailto:prasanthsamy61@gmail.com" target='_blank' rel='noreferrer noopener'>prasanthsamy61@gmail.com</a>
-                            <a href="mailto:dvlpr.prasanth@gmail.com" target='_blank' rel='noreferrer noopener'>dvlpr.prasanth@gmail.com</a>
                         </address>
                     </div>
                 </div>

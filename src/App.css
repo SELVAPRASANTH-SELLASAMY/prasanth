@@ -108,6 +108,10 @@ span.movingBall{
     border-radius: 50px;
     background-color: rgb(187, 187, 187);
 }
+::selection{
+    background-color: var(--green);
+    color: #000000;
+}
 
 @media screen and (width <= 695px) {
     h2::before{

@@ -2,9 +2,14 @@ import aboutStyle from './about.module.css';
 import AboutImage from '../../assets/about-image.webp';
 import { useEffect, useState, useContext } from 'react';
 import { AppContext } from '../../App';
+import { saveAs } from 'file-saver';
+import resumeFile from './Resume.Selvaprasanth.pdf';
 function About(){
     const [age,setAge] = useState("");
     const {aboutRef} = useContext(AppContext);
+    const handleDownload = () => {
+        saveAs(resumeFile,'resume.selvaprasanth.pdf');
+    }
     useEffect(()=>{
         const date = new Date();
         const year = date.getFullYear() - 2003;
@@ -32,7 +37,7 @@ function About(){
                         <li><strong>languages</strong><span>English & tamil</span></li>
                         <li><strong>address</strong><span>Dindigul, Tamil nadu, India</span></li>
                     </ul>
-                    <button>Download Resume</button>
+                    <button onClick={handleDownload}>Download Resume</button>
                 </div>
             </div>
         </section>

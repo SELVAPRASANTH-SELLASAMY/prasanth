@@ -67,31 +67,33 @@ function Reviews(){
         return [...ratingCount,...unratingCount];
     }
 
-    return(
-        <section className={reviewStyle.reviews}>
-            <h2>Client Reviews <span className='bottomLine'><span className='movingBall'></span></span></h2>
-            <div className={reviewStyle.reviewSwiper}>
-                <Swiper
-                spaceBetween={25}
-                slidesPerView={window.innerWidth <= 550 ? 1 : 'auto'}
-                modules={[Navigation, Autoplay]}
-                navigation
-                autoplay={{delay:3000}}
-                >
-                {
-                    reviewArray.map((review,index)=>(
-                        <SwiperSlide key={index} className={reviewStyle.reviewTile}>
-                            <img src={review.image} alt="client" />
-                            <h5 className={reviewStyle.clientName}>{review.name}</h5>
-                            <p className={reviewStyle.org}>{review.orgName} - <span>{review.orgUrl}</span></p>
-                            {rating(review.rating)}
-                            <p className={reviewStyle.comment}>{review.comment}</p>
-                        </SwiperSlide>
-                    ))
-                }
-                </Swiper>
-            </div>
-        </section>
-    );
+    if(reviewArray && reviewArray.length >= 3){
+        return(
+            <section className={reviewStyle.reviews}>
+                <h2>Client Reviews <span className='bottomLine'><span className='movingBall'></span></span></h2>
+                <div className={reviewStyle.reviewSwiper}>
+                    <Swiper
+                    spaceBetween={25}
+                    slidesPerView={window.innerWidth <= 550 ? 1 : 'auto'}
+                    modules={[Navigation, Autoplay]}
+                    navigation
+                    autoplay={{delay:3000}}
+                    >
+                    {
+                        reviewArray.map((review,index)=>(
+                            <SwiperSlide key={index} className={reviewStyle.reviewTile}>
+                                <img src={review.image} alt="client" />
+                                <h5 className={reviewStyle.clientName}>{review.name}</h5>
+                                <p className={reviewStyle.org}>{review.orgName} - <span>{review.orgUrl}</span></p>
+                                {rating(review.rating)}
+                                <p className={reviewStyle.comment}>{review.comment}</p>
+                            </SwiperSlide>
+                        ))
+                    }
+                    </Swiper>
+                </div>
+            </section>
+        );
+    }
 }
 export default Reviews;

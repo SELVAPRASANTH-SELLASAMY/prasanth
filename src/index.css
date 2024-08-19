@@ -9,4 +9,5 @@ body{
     font-family: var(--font-radio-canada);
     background-color: var(--commonBg);
     -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
 }

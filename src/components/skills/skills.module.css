@@ -44,11 +44,11 @@
 p.skillName strong{
     color: #ffffff;
     font-size: var(--small-1);
-    text-align: center;
     font-weight: 500;
 }
 p.skillName{
     margin-bottom: .5rem;
+    text-align: center;
 }
 .progressBarContainer{
     width: 100%;

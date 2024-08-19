@@ -5,7 +5,7 @@ import { useEffect, useRef, useState, useContext } from 'react';
 import Socialprofiles from '../socialprofile/Socialprofiles';
 import { AppContext } from '../../App';
 function Home(){
-    const {homeRef} = useContext(AppContext);
+    const {homeRef,aboutRef} = useContext(AppContext);
     const content = ['Selvaprasanth','Full-stack Developer'];
     const typingCursor = useRef();
     const [contentState,setContentState] = useState("");
@@ -41,6 +41,9 @@ function Home(){
             deleteInterval && clearInterval(deleteInterval);
         }
     }
+    const scrollDown = () => {
+        aboutRef.current.scrollIntoView({behavior:"smooth"});
+    }
     useEffect(()=>{
         handleType();
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -53,7 +56,7 @@ function Home(){
             <h1>Hi, I am <span>{contentState}<span ref={typingCursor}  className={homeStyle.typingCursor}>|</span> </span></h1>
             <p>I am a full-stack web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.</p>
             <Socialprofiles/>
-            <p className={homeStyle.scrollDown}><span><RiArrowDownLine/></span>Scroll down</p>
+            <p className={homeStyle.scrollDown} onClick={scrollDown}><span><RiArrowDownLine/></span>Scroll down</p>
         </section>
     );
 }

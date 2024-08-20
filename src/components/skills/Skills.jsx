@@ -76,14 +76,14 @@ function Skills(){
             <div className={skillStyle.techContainer}>
                 {
                     skillArray.map((tech,index)=>(
-                        <Skilltile key={index} percent={tech.percent} tech={tech.tech} interSect={interSect}/>
+                        <Skilltile key={index} index={index} percent={tech.percent} tech={tech.tech} interSect={interSect}/>
                     ))
                 }
             </div>
             <div className={skillStyle.progressBarContainer}>
                 {
                     techArray.map((skill,index)=>(
-                        <Tech key={index} percent={skill.percent} stack={skill.stack} interSect={interSect}/>
+                        <Tech key={index} index={index} percent={skill.percent} stack={skill.stack} interSect={interSect}/>
                     ))
                 }
             </div>

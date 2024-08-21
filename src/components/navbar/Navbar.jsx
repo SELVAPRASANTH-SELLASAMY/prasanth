@@ -36,7 +36,7 @@ function Navbar(){
                     setActiveWindow(entry.target.getAttribute('name'));
                 }
             });
-        },{threshold:.5, rootMargin:"40px"});
+        },{threshold:[.5,.75], rootMargin: "40px", scrollMargin:"40px"});
         [aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef].forEach(section=>{
             Observer.observe(section.current);
         });

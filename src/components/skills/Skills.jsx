@@ -69,7 +69,7 @@ function Skills(){
                     if(entry.isIntersecting) Observer.unobserve(skill.current);
                 },[250]);
             });
-        },{threshold:.5, rootMargin:"40px"});
+        },{threshold:.25, rootMargin:"40px"});
         Observer.observe(skill.current);
         return ()=> Observer.disconnect();
     },[interSect]);

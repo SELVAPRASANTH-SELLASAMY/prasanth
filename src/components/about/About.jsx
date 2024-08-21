@@ -4,17 +4,9 @@ import { useEffect, useState, useContext } from 'react';
 import { AppContext } from '../../App';
 import { saveAs } from 'file-saver';
 import resumeFile from './Resume.Selvaprasanth.pdf';
-import { useInView } from 'framer-motion';
 function About(){
     const [age,setAge] = useState("");
     const {aboutRef} = useContext(AppContext);
-    const isAboutInView = useInView(aboutRef);
-    const framerAnimation = {
-        transform: isAboutInView ? 'translateY(0)' :'translateY(2.5rem)',
-        transition:'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        opacity: isAboutInView ? 1 : 0,
-        transitionDelay: 0
-    }
     const handleDownload = () => {
         saveAs(resumeFile,'resume.selvaprasanth.pdf');
     }
@@ -28,14 +20,14 @@ function About(){
         <section name='about' ref={aboutRef} className={aboutStyle.about}>
             <h2>About Me <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={aboutStyle.info}>
-                <div style={framerAnimation} className={aboutStyle.border}>
+                <div className={aboutStyle.border}>
                     <span className={aboutStyle.bullet}></span>
                     <span className={aboutStyle.bullet}></span>
                     <span className={aboutStyle.bullet}></span>
                     <span className={aboutStyle.bullet}></span>
                     <img src={AboutImage} alt="About" />
                 </div>
-                <div style={{...framerAnimation,transitionDelay:'650ms'}} className={aboutStyle.details}>
+                <div className={aboutStyle.details}>
                     <h3>Hi, I am <span>Selvaprasanth</span></h3>
                     <ul>
                         <li><strong>first name</strong><span>Selvaprasanth</span></li>

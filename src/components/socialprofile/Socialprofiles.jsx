@@ -1,7 +1,7 @@
 import socialStyle from './socialprofiles.module.css';
 import React from 'react';
 import { RiFacebookFill, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill, RiWhatsappFill } from "react-icons/ri";
-function Socialprofiles({framerAnimation}){
+function Socialprofiles(){
     const socialMediasArray = [
         {
             icon:<RiFacebookFill/>,
@@ -38,7 +38,7 @@ function Socialprofiles({framerAnimation}){
         return [...icons];
     }
     return(
-        <div style={{...framerAnimation,transitionDelay:'950ms'}} className={socialStyle.socialMedias}>
+        <div className={socialStyle.socialMedias}>
             {renderSocialMedias()}
         </div>
     );

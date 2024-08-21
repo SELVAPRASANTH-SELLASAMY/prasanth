@@ -2,22 +2,13 @@ import contactStyle from './contact.module.css';
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
 import { AppContext } from '../../App';
-import { useContext, useRef } from 'react';
-import { useInView } from 'framer-motion';
+import { useContext } from 'react';
 function Contact(){
     const {contactRef} = useContext(AppContext);
-    const contactTileRef = useRef();
-    const isContactDetailsInView = useInView(contactRef,{once:false});
-    const framerAnimation = {
-        transform: isContactDetailsInView ? 'translateY(0)' :'translateY(2.5rem)',
-        transition:'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        opacity: isContactDetailsInView ? 1 : 0,
-        transitionDelay: 0
-    }
     return(
         <section name='contact' ref={contactRef} className={contactStyle.contact}>
             <h2>Contact Me <span className='bottomLine'><span className='movingBall'></span></span></h2>
-            <div ref={contactTileRef} style={framerAnimation} className={contactStyle.contactInformation}>
+            <div className={contactStyle.contactInformation}>
                 <h4>Contact Information</h4>
                 <p className={contactStyle.slogan}>Let's talk a project. If you want scalable, responsive & visually appealing application then why are you waiting? contact me through the below details or just hit a message in the form. I'll get in touch with you soon. <span className='bottomLine'><span className='movingBall'></span></span></p>
                 <div className={contactStyle.details}>
@@ -54,7 +45,7 @@ function Contact(){
                     </div>
                 </div>
             </div>
-            <form ref={contactTileRef} style={{...framerAnimation,transitionDelay:'750ms'}} name='contact' noValidate>
+            <form name='contact' noValidate>
                 <label htmlFor="name">Name</label>
                 <input type="text" id='name' name='name' autoComplete='off' placeholder='Enter your name'/>
                 <label htmlFor="email">Email</label>

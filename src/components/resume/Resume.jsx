@@ -1,18 +1,9 @@
 import resumeStyle from './resume.module.css';
 import { RiBook2Line, RiShoppingBagLine } from "react-icons/ri";
 import { AppContext } from '../../App';
-import { useContext, useRef } from 'react';
-import { useInView } from 'framer-motion';
+import { useContext } from 'react';
 function Resume(){
     const {resumeRef} = useContext(AppContext);
-    const timeLineRef = useRef();
-    const isTimeLineInView = useInView(timeLineRef,{once:false});
-    const framerAnimation = {
-        transform: isTimeLineInView ? 'translateY(0)' :'translateY(2.5rem)',
-        transition:'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        opacity: isTimeLineInView ? 1 : 0,
-        transitionDelay: 0
-    }
     const educationContent = [
         {
             year:"2020 - 2024",
@@ -49,7 +40,7 @@ function Resume(){
                     <h4><span>{<RiBook2Line/>}</span>Edcational Qualification</h4>
                     {
                         educationContent.map((education,index)=>(
-                            <div ref={timeLineRef} key={index} style={{...framerAnimation,transitionDelay:`calc(500ms + (250ms * ${index}))`}} className={resumeStyle.timeline}>
+                            <div key={index} className={resumeStyle.timeline}>
                                 <span className={resumeStyle.year}>{education.year}</span>
                                 <span className={resumeStyle.activity}>
                                     <h5 className={resumeStyle.field}>{education.field}</h5>
@@ -64,7 +55,7 @@ function Resume(){
                     <h4><span>{<RiShoppingBagLine/>}</span>Working Experience</h4>
                     {
                         experienceContent.map((education,index)=>(
-                            <div ref={timeLineRef} key={index} style={{...framerAnimation,transitionDelay:`calc(500ms + (250ms * ${index}))`}}  className={resumeStyle.timeline}>
+                            <div className={resumeStyle.timeline}>
                                 <span className={resumeStyle.year}>{education.year}</span>
                                 <span className={resumeStyle.activity}>
                                     <h5 className={resumeStyle.field}>{education.field}</h5>

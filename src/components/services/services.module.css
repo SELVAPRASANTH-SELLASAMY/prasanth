@@ -37,7 +37,7 @@
     font-size: 2.5rem;
     color: var(--green);
 }
-.serviceTile h4{
+.serviceTile h5{
     font-size: var(--small-1);
     color: #ffffff;
     font-weight: 500;

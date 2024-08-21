@@ -9,8 +9,13 @@ p.copyright{
     font-size: var(--small);
     color: var(--lightBlue);
 }
-p.copyright span{
+p.copyright a{
     color: #ffffff;
+    text-decoration: none;
+    transition: color 250ms;
+}
+p.copyright a:hover{
+    color: var(--green);
 }
 
 @media screen and (width <= 720px) {

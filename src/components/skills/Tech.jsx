@@ -11,6 +11,7 @@ function Tech({percent,stack,interSect}){
             }
         }
         const incrementInterval = setInterval(increment,15);
+        return () => clearInterval(incrementInterval);
     }
     useEffect(()=>{
         if(interSect){

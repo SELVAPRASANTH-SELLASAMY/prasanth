@@ -32,7 +32,7 @@ function About(){
                     <ul>
                         <li><strong>first name</strong><span>Selvaprasanth</span></li>
                         <li><strong>last name</strong><span>Sellasamy</span></li>
-                        <li className={aboutStyle.age}><strong>age</strong><span>{age}</span></li>
+                        <li><strong>age</strong><span>{age}</span></li>
                         <li><strong>nationality</strong><span>Indian</span></li>
                         <li><strong>languages</strong><span>English & tamil</span></li>
                         <li><strong>address</strong><span>Dindigul, Tamil nadu, India</span></li>

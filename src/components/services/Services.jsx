@@ -20,11 +20,11 @@ function Services(){
                 {
                     serviceContent.map((serv,index)=>(
                         <div key={index} className={serviceStyle.serviceTile}>
-                            <div className={serviceStyle.serielNumber}>{(index+1).toString().padStart(2,'0')}</div>
+                            <span className={serviceStyle.serielNumber}>{(index+1).toString().padStart(2,'0')}</span>
                             <figure>
                                 {serv.image}
                             </figure>
-                            <h4>{serv.serviceName}</h4>
+                            <h5>{serv.serviceName}</h5>
                             <p>{serv.content}</p>
                         </div>
                     ))

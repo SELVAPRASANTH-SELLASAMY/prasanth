@@ -11,6 +11,7 @@ function Skilltile({percent,tech,interSect}){
             }
         }
         const incrementInterval = setInterval(increment,15);
+        return ()=> clearInterval(incrementInterval);
     }
     useEffect(()=>{
         if(interSect){

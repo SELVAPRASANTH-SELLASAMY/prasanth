@@ -24,7 +24,6 @@
     color: var(--lightBlue);
     font-size: var(--small);
     line-height: var(--line-height-p);
-    transition: color 250ms;
 }
 .contact address{
     font-style: normal;
@@ -34,6 +33,7 @@
     font-size: inherit;
     text-decoration: none;
     display: block;
+    transition: color 250ms;
 }
 .contact .details address a:hover{
     color: var(--green);

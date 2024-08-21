@@ -55,7 +55,7 @@ function Resume(){
                     <h4><span>{<RiShoppingBagLine/>}</span>Working Experience</h4>
                     {
                         experienceContent.map((education,index)=>(
-                            <div className={resumeStyle.timeline}>
+                            <div key={index} className={resumeStyle.timeline}>
                                 <span className={resumeStyle.year}>{education.year}</span>
                                 <span className={resumeStyle.activity}>
                                     <h5 className={resumeStyle.field}>{education.field}</h5>

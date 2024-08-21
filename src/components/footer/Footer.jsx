@@ -4,7 +4,7 @@ function Footer(){
     return(
         <footer>
             <Socialprofiles/>
-            <p className={footerStyle.copyright}>&copy; 2024, All rights reserved <span>selvaprasanth.tech</span></p>
+            <p className={footerStyle.copyright}>&copy; 2024, All rights reserved <a href='https://selvaprasanth.tech'>selvaprasanth.tech</a></p>
         </footer>
     );
 }

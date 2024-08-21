@@ -1,7 +1,7 @@
 .skill h2::before{
     content: "skills";
 }
-.techContainer{
+.progressBarContainer{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap: 2rem;
@@ -50,14 +50,14 @@ p.skillName{
     margin-bottom: .5rem;
     text-align: center;
 }
-.progressBarContainer{
+.techContainer{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
     margin-top: 2.5rem;
 }
-.progressBarContainer progress[value]{
+.techContainer progress[value]{
     background: var(--lightGreen);
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -66,25 +66,25 @@ p.skillName{
     width: 100%;
     height: 1rem;
 }
-.progressBarContainer progress[value]::-webkit-progress-bar{
+.techContainer progress[value]::-webkit-progress-bar{
     background: var(--lightGreen);
     border-radius: 50px;
 }
-.progressBarContainer progress[value]::-webkit-progress-value{
+.techContainer progress[value]::-webkit-progress-value{
     background: var(--green);
     border-radius: 50px;
 }
-.progressBarContainer label{
+.techContainer label{
     color: #ffffff;
     font-size: var(--small-1);
     display: block;
     margin: 1rem 0;
 }
-.progressBarContainer label span{
+.techContainer label span{
     color: var(--green);
 }
 @media screen and (width <= 695px) {
-    .progressBarContainer{
+    .techContainer{
         grid-template-columns: 1fr;
     }
 }

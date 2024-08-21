@@ -76,17 +76,17 @@ function Skills(){
     return(
         <section ref={skill} className={skillStyle.skill}>
             <h2>My Skills <span className='bottomLine'><span className='movingBall'></span></span></h2>
-            <div className={skillStyle.techContainer}>
+            <div className={skillStyle.progressBarContainer}>
                 {
-                    skillArray.map((tech,index)=>(
-                        <Skilltile key={index} percent={tech.percent} tech={tech.tech} interSect={interSect}/>
+                    skillArray.map((skill,index)=>(
+                        <Skilltile key={index} percent={skill.percent} tech={skill.tech} interSect={interSect}/>
                     ))
                 }
             </div>
-            <div className={skillStyle.progressBarContainer}>
+            <div className={skillStyle.techContainer}>
                 {
-                    techArray.map((skill,index)=>(
-                        <Tech key={index} percent={skill.percent} stack={skill.stack} interSect={interSect}/>
+                    techArray.map((tech,index)=>(
+                        <Tech key={index} percent={tech.percent} stack={tech.stack} interSect={interSect}/>
                     ))
                 }
             </div>

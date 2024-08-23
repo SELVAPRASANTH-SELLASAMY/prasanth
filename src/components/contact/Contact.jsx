@@ -2,9 +2,49 @@ import contactStyle from './contact.module.css';
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
 import { AppContext } from '../../App';
-import { useContext } from 'react';
+import { useContext, useRef, useState } from 'react';
+import Loader from '../loader/Loader';
+import Axios from 'axios';
 function Contact(){
     const {contactRef} = useContext(AppContext);
+    const [loading,setLoading] = useState(false);
+    const [formState,setFormState] = useState({
+        name:"",
+        email:"",
+        subject:"",
+        message:""
+    });
+    const warning = useRef();
+
+    function respond(res,msg = "OOPS! Something went wrong."){
+        setLoading(false);
+        warning.current.innerText = res.status === 200 ? "Got your message. I'll get you back soon!" : msg;
+        warning.current.style.color = res.status === 200 ? 'var(--green)' : 'red';
+        warning.current.style.top = '.5rem';
+        if(res.status !== 200){console.log(res)}
+        setTimeout(()=>{
+            warning.current.style.top = '-1.5rem';
+        },[3000]);
+    }
+
+    function validate(){
+        if(formState.name && formState.email && formState.subject && formState.message){
+            return sendMail();
+        }
+        return respond(404,"All the fields are required to be filled!");
+    }
+
+    const sendMail = () => {
+        setLoading(true);
+        Axios.post("http://localhost:3001/portfolio/sendEmail",formState)
+        .then((res)=>{
+            respond(res);
+        })
+        .catch((error)=>{
+            respond(error);
+        });
+    }
+
     return(
         <section name='contact' ref={contactRef} className={contactStyle.contact}>
             <h2>Contact Me <span className='bottomLine'><span className='movingBall'></span></span></h2>
@@ -46,15 +86,17 @@ function Contact(){
                 </div>
             </div>
             <form name='contact' noValidate>
-                <label htmlFor="name">Name</label>
-                <input type="text" id='name' name='name' autoComplete='off' placeholder='Enter your name'/>
-                <label htmlFor="email">Email</label>
-                <input type="email" id='email' name='email' autoComplete='off' placeholder='Enter your email'/>
-                <label htmlFor="subject">Subject</label>
-                <input type="text" id='subject' name='subject' autoComplete='off' placeholder='Enter the subject'/>
-                <label htmlFor="message">Message</label>
-                <textarea name="message" id="message" placeholder='Enter your message'></textarea>
-                <button type='button'>Send mail</button>
+                <label htmlFor="name">Name <span>*</span></label>
+                <input onChange={(e)=>setFormState({...formState,name:e.target.value})} type="text" id='name' name='name' autoComplete='off' placeholder='Enter your name'/>
+                <label htmlFor="email">Email <span>*</span></label>
+                <input onChange={(e)=>setFormState({...formState,email:e.target.value})} type="email" id='email' name='email' autoComplete='off' placeholder='Enter your email'/>
+                <label htmlFor="subject">Subject <span>*</span></label>
+                <input onChange={(e)=>setFormState({...formState,subject:e.target.value})} type="text" id='subject' name='subject' autoComplete='off' placeholder='Enter the subject'/>
+                <label htmlFor="message">Message <span>*</span></label>
+                <textarea onChange={(e)=>setFormState({...formState,message:e.target.value})} name="message" id="message" placeholder='Enter your message'></textarea>
+                <button onClick={validate} type='button'>Send mail</button>
+                <p ref={warning} className={contactStyle.warn}>All the fields are required to be filled!</p>
+                {loading ? <Loader/> : null}
             </form>
         </section>
     );

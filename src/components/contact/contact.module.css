@@ -67,10 +67,15 @@
     border-radius: .5rem;
     padding: 2rem 1.5rem;
     box-shadow: var(--smokeShadow);
+    position: relative;
+    overflow: hidden;
 }
 .contact form label{
     color: #ffffff;
     font-size: var(--small);
+}
+.contact form label span{
+    color: var(--green);
 }
 .contact form input,form textarea{
     color: var(--lightBlue);
@@ -114,6 +119,15 @@
 }
 .contact form textarea::-webkit-scrollbar{
     width: 0;
+}
+.contact form p.warn{
+    color: red;
+    font-size: var(--small);
+    font-weight: 500;
+    position: absolute;
+    right: 1rem;
+    transition: top 250ms;
+    top: -1.5rem;
 }
 
 @media screen and (width <= 950px) {

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/prasanth/static/css/main.41552b29.css",
-    "main.js": "/prasanth/static/js/main.1e130bb2.js",
+    "main.css": "/prasanth/static/css/main.2c63abc0.css",
+    "main.js": "/prasanth/static/js/main.a41b96b4.js",
     "static/media/avatar.jpg": "/prasanth/static/media/avatar.cd7d9269aa3e088717be.jpg",
     "static/media/Resume.Selvaprasanth.pdf": "/prasanth/static/media/Resume.Selvaprasanth.d0ffa0fb78f64ba3bae5.pdf",
     "static/media/cgs.png": "/prasanth/static/media/cgs.66446ad76a2214bd8f37.png",
@@ -10,11 +10,11 @@
     "static/media/alcaline.png": "/prasanth/static/media/alcaline.db0eed197b3af53edd92.png",
     "static/media/about-image.webp": "/prasanth/static/media/about-image.fc16da5b4a74a9dbf788.webp",
     "index.html": "/prasanth/index.html",
-    "main.41552b29.css.map": "/prasanth/static/css/main.41552b29.css.map",
-    "main.1e130bb2.js.map": "/prasanth/static/js/main.1e130bb2.js.map"
+    "main.2c63abc0.css.map": "/prasanth/static/css/main.2c63abc0.css.map",
+    "main.a41b96b4.js.map": "/prasanth/static/js/main.a41b96b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.41552b29.css",
-    "static/js/main.1e130bb2.js"
+    "static/css/main.2c63abc0.css",
+    "static/js/main.a41b96b4.js"
   ]
 }

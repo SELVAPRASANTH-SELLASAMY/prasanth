@@ -1,7 +1,11 @@
 {
   "files": {
-    "main.css": "/prasanth/static/css/main.2c63abc0.css",
-    "main.js": "/prasanth/static/js/main.a41b96b4.js",
+    "main.css": "/prasanth/static/css/main.35c784d9.css",
+    "main.js": "/prasanth/static/js/main.b41e4d84.js",
+    "static/media/jsinter.png": "/prasanth/static/media/jsinter.bc2321025a3daac2d745.png",
+    "static/media/java.png": "/prasanth/static/media/java.754defa9ddd4a1f2a7f8.png",
+    "static/media/sql.png": "/prasanth/static/media/sql.0b7aca89147737ce9ad7.png",
+    "static/media/jsbasic.png": "/prasanth/static/media/jsbasic.4ade602a9119c79d3380.png",
     "static/media/avatar.jpg": "/prasanth/static/media/avatar.cd7d9269aa3e088717be.jpg",
     "static/media/Resume.Selvaprasanth.pdf": "/prasanth/static/media/Resume.Selvaprasanth.d0ffa0fb78f64ba3bae5.pdf",
     "static/media/cgs.png": "/prasanth/static/media/cgs.66446ad76a2214bd8f37.png",
@@ -10,11 +14,11 @@
     "static/media/alcaline.png": "/prasanth/static/media/alcaline.db0eed197b3af53edd92.png",
     "static/media/about-image.webp": "/prasanth/static/media/about-image.fc16da5b4a74a9dbf788.webp",
     "index.html": "/prasanth/index.html",
-    "main.2c63abc0.css.map": "/prasanth/static/css/main.2c63abc0.css.map",
-    "main.a41b96b4.js.map": "/prasanth/static/js/main.a41b96b4.js.map"
+    "main.35c784d9.css.map": "/prasanth/static/css/main.35c784d9.css.map",
+    "main.b41e4d84.js.map": "/prasanth/static/js/main.b41e4d84.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c63abc0.css",
-    "static/js/main.a41b96b4.js"
+    "static/css/main.35c784d9.css",
+    "static/js/main.b41e4d84.js"
   ]
 }

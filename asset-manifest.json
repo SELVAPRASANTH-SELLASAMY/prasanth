@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/prasanth/static/css/main.35c784d9.css",
-    "main.js": "/prasanth/static/js/main.23b06464.js",
-    "static/media/sql.png": "/prasanth/static/media/sql.67476396698b18fac0be.png",
-    "static/media/java.png": "/prasanth/static/media/java.a068dc83410ddc9c3e84.png",
-    "static/media/jsinter.png": "/prasanth/static/media/jsinter.31059d14dd070f1f7a4c.png",
-    "static/media/jsbasic.png": "/prasanth/static/media/jsbasic.dc7dad801382792cc816.png",
-    "static/media/avatar.jpg": "/prasanth/static/media/avatar.cd7d9269aa3e088717be.jpg",
-    "static/media/Resume.Selvaprasanth.pdf": "/prasanth/static/media/Resume.Selvaprasanth.d0ffa0fb78f64ba3bae5.pdf",
-    "static/media/cgs.png": "/prasanth/static/media/cgs.66446ad76a2214bd8f37.png",
-    "static/media/portfolio.png": "/prasanth/static/media/portfolio.4e06cf6f7cbf55850bcf.png",
-    "static/media/zukoCoffee.png": "/prasanth/static/media/zukoCoffee.d6c2abe092658c269062.png",
-    "static/media/alcaline.png": "/prasanth/static/media/alcaline.db0eed197b3af53edd92.png",
-    "static/media/about-image.webp": "/prasanth/static/media/about-image.fc16da5b4a74a9dbf788.webp",
-    "index.html": "/prasanth/index.html",
-    "main.35c784d9.css.map": "/prasanth/static/css/main.35c784d9.css.map",
-    "main.23b06464.js.map": "/prasanth/static/js/main.23b06464.js.map"
+    "main.css": "/static/css/main.35c784d9.css",
+    "main.js": "/static/js/main.4e8ea5b9.js",
+    "static/media/sql.png": "/static/media/sql.67476396698b18fac0be.png",
+    "static/media/java.png": "/static/media/java.a068dc83410ddc9c3e84.png",
+    "static/media/jsinter.png": "/static/media/jsinter.31059d14dd070f1f7a4c.png",
+    "static/media/jsbasic.png": "/static/media/jsbasic.dc7dad801382792cc816.png",
+    "static/media/avatar.jpg": "/static/media/avatar.cd7d9269aa3e088717be.jpg",
+    "static/media/Resume.Selvaprasanth.pdf": "/static/media/Resume.Selvaprasanth.d0ffa0fb78f64ba3bae5.pdf",
+    "static/media/cgs.png": "/static/media/cgs.66446ad76a2214bd8f37.png",
+    "static/media/portfolio.png": "/static/media/portfolio.4e06cf6f7cbf55850bcf.png",
+    "static/media/zukoCoffee.png": "/static/media/zukoCoffee.d6c2abe092658c269062.png",
+    "static/media/alcaline.png": "/static/media/alcaline.db0eed197b3af53edd92.png",
+    "static/media/about-image.webp": "/static/media/about-image.fc16da5b4a74a9dbf788.webp",
+    "index.html": "/index.html",
+    "main.35c784d9.css.map": "/static/css/main.35c784d9.css.map",
+    "main.4e8ea5b9.js.map": "/static/js/main.4e8ea5b9.js.map"
   },
   "entrypoints": [
     "static/css/main.35c784d9.css",
-    "static/js/main.23b06464.js"
+    "static/js/main.4e8ea5b9.js"
   ]
 }

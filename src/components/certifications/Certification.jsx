@@ -29,7 +29,7 @@ function Certification(){
             <div className={certifyStyle.certificateContainer}>
                 {
                     content.map(({image,url},index)=>(
-                        <img key={index} src={image} onClick={()=>window.open(url,"_blank","noreferrer noopener")} alt="certificate-image" />
+                        <img loading='lazy' key={index} src={image} onClick={()=>window.open(url,"_blank","noreferrer noopener")} alt="certificate-image" />
                     ))
                 }
             </div>

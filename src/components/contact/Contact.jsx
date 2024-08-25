@@ -52,7 +52,7 @@ function Contact(){
             <h2>Contact Me <span className='bottomLine'><span className='movingBall'></span></span></h2>
             <div className={contactStyle.contactInformation}>
                 <h4>Contact Information</h4>
-                <p className={contactStyle.slogan}>Let's talk a project. If you want scalable, responsive & visually appealing application then why are you waiting? contact me through the below details or just hit a message in the form. I'll get in touch with you soon. <span className='bottomLine'><span className='movingBall'></span></span></p>
+                <p className={contactStyle.slogan}>Let's talk about a project. If you want a scalable, responsive & visually appealing application then why are you waiting? contact me through the below details or just hit a message in the form. I'll get in touch with you soon. <span className='bottomLine'><span className='movingBall'></span></span></p>
                 <div className={contactStyle.details}>
                     <figure>
                         <RiPhoneLine/>

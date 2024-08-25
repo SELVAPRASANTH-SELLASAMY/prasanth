@@ -9,19 +9,19 @@ function Resume(){
             year:"2020 - 2024",
             field:"Bachelor of Engineering",
             org:"Kongu Engineering College, Erode.",
-            info:`Started my Engineering journey in "Mechanical Engineering" stream. Equiped leadership ability, problem solving ability & fluent communication skill through participation in coding contests, paper presentation & Other club activities such as NSS. I've completed the degree with the CGPA of 8.16.`
+            info:`I started my Engineering journey in the "Mechanical Engineering" stream. I equipped leadership ability, problem solving ability & fluent communication skills through participation in coding contests, paper presentations & Other club activities such as NSS. I've completed the degree with a CGPA of 8.16.`
         },
         {
             year:"2018 - 2020",
             field:"HSC",
             org:"Sri Renugadevi hr.sec.school, Dindigul.",
-            info:`Pursued higher education in "Computer Science" department. My first knowledge about computers starts here. I've completed it with the percentage of 74.17%`
+            info:`I pursued higher education in "Computer Science" department. My first knowledge of computers starts here. I've completed it with a percentage of 74.17%.`
         },
         {
             year:"2017 - 2018",
             field:"SSLC",
             org:"Sri Renugadevi hr.sec.school, Dindigul.",
-            info:`Obtained logical thinking & mathematical knowledge. I've completed it with the percentage of 82.4%`
+            info:`Obtained logical thinking & mathematical knowledge. I've completed it with a percentage of 82.4%.`
         }
     ];
     const experienceContent = [
@@ -29,7 +29,7 @@ function Resume(){
             year:"2024",
             field:"Software Engineer Intern",
             org:"Applied Materials India Pvt Ltd.",
-            info:"Got this Intern cum Fulltime opportunity via college placement. During this period (Mar 2024 - May 2024) I've worked as a part of QA department in which I've explored various manual testing tools used by AMAT. I've also involved in few Java automation tasks."
+            info:"Got this Intern cum Fulltime opportunity via college placement. During this period (Mar 2024 - May 2024) I've worked as a part of the QA department in which I've explored various manual testing tools used by AMAT. I've also been involved in a few Java automation tasks."
         }
     ];
     return(

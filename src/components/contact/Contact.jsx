@@ -5,6 +5,7 @@ import { AppContext } from '../../App';
 import { useContext, useRef, useState } from 'react';
 import Loader from '../loader/Loader';
 import Axios from 'axios';
+import useFormhandler from '../cutomhooks/useFormhandler';
 function Contact(){
     const {contactRef} = useContext(AppContext);
     const [loading,setLoading] = useState(false);
@@ -24,14 +25,15 @@ function Contact(){
         if(res.status !== 200){console.log(res)}
         setTimeout(()=>{
             warning.current.style.top = '-1.5rem';
-        },[3000]);
+        },3000);
     }
 
-    function validate(){
-        if(formState.name && formState.email && formState.subject && formState.message){
-            return sendMail();
+    const Handlesubmit = () => {
+        const isValidForm = useFormhandler(formState);
+        if(!isValidForm.valid){
+            return respond("",isValidForm.message);
         }
-        return respond(404,"All the fields are required to be filled!");
+        return sendMail();
     }
 
     const sendMail = () => {
@@ -94,7 +96,7 @@ function Contact(){
                 <input onChange={(e)=>setFormState({...formState,subject:e.target.value})} type="text" id='subject' name='subject' autoComplete='off' placeholder='Enter the subject'/>
                 <label htmlFor="message">Message <span>*</span></label>
                 <textarea onChange={(e)=>setFormState({...formState,message:e.target.value})} name="message" id="message" placeholder='Enter your message'></textarea>
-                <button onClick={validate} type='button'>Send mail</button>
+                <button onClick={Handlesubmit} type='button'>Send mail</button>
                 <p ref={warning} className={contactStyle.warn}>All the fields are required to be filled!</p>
                 {loading ? <Loader/> : null}
             </form>

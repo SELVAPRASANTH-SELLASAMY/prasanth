@@ -39,7 +39,7 @@ function Works(){
             heading:"Personal portfolio",
             definition:"A portfolio with visually appealing animations",
             stack:"ReactJs,CSS,swiperJs",
-            liveUrl:'https://selvaprasanth.tech/',
+            liveUrl:'https://selvaprasanth-sellasamy.github.io/portfolio/',
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/portfolio.git'
         }
     ];

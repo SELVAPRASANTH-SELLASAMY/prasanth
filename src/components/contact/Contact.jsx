@@ -31,7 +31,7 @@ function Contact(){
     const Handlesubmit = () => {
         const isValidForm = useFormhandler(formState);
         if(!isValidForm.valid){
-            return respond("",isValidForm.message);
+            return respond("",isValidForm.response);
         }
         return sendMail();
     }

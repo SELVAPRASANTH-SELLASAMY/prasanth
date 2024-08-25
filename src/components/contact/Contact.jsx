@@ -5,7 +5,7 @@ import { AppContext } from '../../App';
 import { useContext, useRef, useState } from 'react';
 import Loader from '../loader/Loader';
 import Axios from 'axios';
-import useFormhandler from '../cutomhooks/useFormhandler';
+import useFormval from '../cutomhooks/useFormval';
 function Contact(){
     const {contactRef} = useContext(AppContext);
     const [loading,setLoading] = useState(false);
@@ -29,7 +29,7 @@ function Contact(){
     }
 
     const Handlesubmit = () => {
-        const isValidForm = useFormhandler(formState);
+        const isValidForm = useFormval(formState);
         if(!isValidForm.valid){
             return respond("",isValidForm.response);
         }

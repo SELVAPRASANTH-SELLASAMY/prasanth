@@ -15,46 +15,6 @@ function Reviews(){
             rating:3,
             comment:"Working with Prasanth is very good experience for me. He’s a good person. If I need developer in future, I’ll definately hire him."
         },
-        {
-            image:sampleImage,
-            name:"Steve rogers",
-            orgName:"Talent pool",
-            orgUrl:"talentpool.com",
-            rating:3,
-            comment:"Working with Prasanth is very good experience for me. He’s a good person. If I need developer in future, I’ll definately hire him."
-        },
-        {
-            image:sampleImage,
-            name:"Steve rogers",
-            orgName:"Talent pool",
-            orgUrl:"talentpool.com",
-            rating:3,
-            comment:"Working with Prasanth is very good experience for me. He’s a good person. If I need developer in future, I’ll definately hire him."
-        },
-        {
-            image:sampleImage,
-            name:"Steve rogers",
-            orgName:"Talent pool",
-            orgUrl:"talentpool.com",
-            rating:3,
-            comment:"Working with Prasanth is very good experience for me. He’s a good person. If I need developer in future, I’ll definately hire him."
-        },
-        {
-            image:sampleImage,
-            name:"Steve rogers",
-            orgName:"Talent pool",
-            orgUrl:"talentpool.com",
-            rating:3,
-            comment:"Working with Prasanth is very good experience for me. He’s a good person. If I need developer in future, I’ll definately hire him."
-        },
-        {
-            image:sampleImage,
-            name:"Steve rogers",
-            orgName:"Talent pool",
-            orgUrl:"talentpool.com",
-            rating:3,
-            comment:"Working with Prasanth is very good experience for me. He’s a good person. If I need developer in future, I’ll definately hire him."
-        }
     ];
 
     const rating = (rate) => {

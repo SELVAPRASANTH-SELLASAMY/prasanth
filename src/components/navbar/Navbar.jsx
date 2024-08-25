@@ -58,10 +58,10 @@ function Navbar(){
                     <li className={activeWindow === 'works' ? navStyle.active : null} onClick={()=>handleNavigation(worksRef)}><span>Works</span></li>
                     <li className={activeWindow === 'blogs' ? navStyle.active : null} onClick={()=>handleNavigation(blogRef)}><span>Blog</span></li>
                     <li className={activeWindow === 'contact' ? navStyle.active : null} onClick={()=>handleNavigation(contactRef)}><span>Contact</span></li>
-                    <button>Hire me</button>
+                    <button onClick={()=>handleNavigation(contactRef)}>Hire me</button>
                 </ol>
             </nav>
-            <button>Hire me</button>
+            <button onClick={()=>handleNavigation(contactRef)}>Hire me</button>
             <RiMenuFill className={navStyle.hamburger} onClick={handleMenubar}/>
         </header>
     );

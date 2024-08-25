@@ -1,0 +1,17 @@
+.certification h2::before{
+    content: "certs";
+}
+.certification .certificateContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1.5rem;
+}
+.certification img{
+    width: 100%;
+    border-radius: .25rem;
+    transition: 500ms;
+    cursor: pointer;
+}
+.certification img:hover{
+    transform: translateY(-.5rem);
+}

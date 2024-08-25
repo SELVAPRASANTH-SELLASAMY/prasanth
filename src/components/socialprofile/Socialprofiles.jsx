@@ -1,6 +1,6 @@
 import socialStyle from './socialprofiles.module.css';
 import React from 'react';
-import { RiFacebookFill, RiTwitterXFill, RiGithubFill, RiLinkedinBoxFill, RiWhatsappFill } from "react-icons/ri";
+import { RiFacebookFill, RiInstagramLine, RiGithubFill, RiLinkedinBoxFill, RiWhatsappFill } from "react-icons/ri";
 function Socialprofiles(){
     const socialMediasArray = [
         {
@@ -12,8 +12,8 @@ function Socialprofiles(){
             url:"https://wa.me/+919003413727"
         },
         {
-            icon:<RiTwitterXFill/>,
-            url:"https://x.com/solarisknight61"
+            icon:<RiInstagramLine/>,
+            url:"https://www.instagram.com/prasanth_sellasamy?igsh=MWxuOWR2dXRzZThzbQ=="
         },
         {
             icon:<RiGithubFill/>,

@@ -1,4 +1,4 @@
-function useFormhandler(formState){
+function useFormval(formState){
     const keys = Object.keys(formState);
     for(const key of keys){
         if(!formState[key]){
@@ -13,4 +13,4 @@ function useFormhandler(formState){
     }
     return {valid:true};
 }
-export default useFormhandler;
+export default useFormval;

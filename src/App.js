@@ -1,5 +1,5 @@
 import './App.css';
-import { Navbar, Home, About, Skills, Services, Resume, Works, Reviews, Blogs, Contact, Footer } from './components';
+import { Navbar, Home, About, Skills, Services, Resume, Works, Reviews, Blogs, Contact, Footer, Certification } from './components';
 import { createContext, useRef } from 'react';
 const AppContext = createContext();
 function App() {
@@ -18,6 +18,7 @@ function App() {
           <Home/>
           <About/>
           <Skills/>
+          <Certification/>
           <Services/>
           <Resume/>
           <Works/>

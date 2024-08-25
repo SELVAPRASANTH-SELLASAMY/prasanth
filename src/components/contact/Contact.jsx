@@ -38,7 +38,7 @@ function Contact(){
 
     const sendMail = () => {
         setLoading(true);
-        Axios.post("http://localhost:3001/portfolio/sendEmail",formState)
+        Axios.post("https://jarvis-r2p3.onrender.com/portfolio/sendEmail",formState)
         .then((res)=>{
             respond(res);
         })

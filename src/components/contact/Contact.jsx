@@ -16,6 +16,7 @@ function Contact(){
         message:""
     });
     const warning = useRef();
+    const emailForm = useRef();
 
     function respond(res,msg = "OOPS! Something went wrong."){
         setLoading(false);
@@ -25,7 +26,12 @@ function Contact(){
         if(res.status !== 200){console.log(res)}
         setTimeout(()=>{
             warning.current.style.top = '-1.5rem';
+            if(res.status === 200){resetForm(emailForm.current);}
         },3000);
+    }
+
+    const resetForm = (form) => {
+        form.reset();
     }
 
     const Handlesubmit = () => {
@@ -87,7 +93,7 @@ function Contact(){
                     </div>
                 </div>
             </div>
-            <form name='contact' noValidate>
+            <form ref={emailForm} name='contact' noValidate>
                 <label htmlFor="name">Name <span>*</span></label>
                 <input onChange={(e)=>setFormState({...formState,name:e.target.value})} type="text" id='name' name='name' autoComplete='off' placeholder='Enter your name'/>
                 <label htmlFor="email">Email <span>*</span></label>

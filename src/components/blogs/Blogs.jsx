@@ -17,6 +17,46 @@ function Blogs(){
             title:"Learn programming easy way",
             category:"Technology"
         },
+        {
+            image:sampleImage,
+            month:'Aug',
+            date:15,
+            year:2024,
+            title:"Learn programming easy way",
+            category:"Technology"
+        },
+        {
+            image:sampleImage,
+            month:'Aug',
+            date:15,
+            year:2024,
+            title:"Learn programming easy way",
+            category:"Technology"
+        },
+        {
+            image:sampleImage,
+            month:'Aug',
+            date:15,
+            year:2024,
+            title:"Learn programming easy way",
+            category:"Technology"
+        },
+        {
+            image:sampleImage,
+            month:'Aug',
+            date:15,
+            year:2024,
+            title:"Learn programming easy way",
+            category:"Technology"
+        },
+        {
+            image:sampleImage,
+            month:'Aug',
+            date:15,
+            year:2024,
+            title:"Learn programming easy way",
+            category:"Technology"
+        }
     ];
 
     if(blogContent && blogContent.length > 3){

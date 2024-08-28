@@ -1,0 +1,57 @@
+.workdesc{
+    margin-top: 8rem;
+}
+.workdesc h2::before{
+    content: "works";
+}
+.workdesc h2{
+    font-size: var(--small-11);
+    margin-bottom: 0;
+}
+.workdesc img{
+    width: 70%;
+    border-radius: .5rem;
+    margin: 2.5rem 17.5%;
+    margin-top: 5rem;
+    box-shadow: var(--smokeShadow);
+}
+.workdesc h5{
+    color: #ffffff;
+    font-size: var(--small-1);
+    font-weight: 500;
+    margin: 1rem 0;
+}
+.workdesc .techstacks{
+    background-color: var(--tileBlue);
+    border-radius: .5rem;
+    box-shadow: var(--smokeShadow);
+    border-left: .3rem solid var(--green);
+    padding: 1rem 2rem;
+}
+.workdesc li{
+    list-style-position: outside;
+    color: var(--green);
+    margin-left: 1rem;
+    font-size: var(--small-15);
+    vertical-align: middle;
+}
+.workdesc p{
+    color: var(--lightBlue);
+    font-size: var(--small);
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+
+@media screen and (width <= 769px){
+    .workdesc img{
+        width: 100%;
+        margin: 2.5rem 0;
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (width <= 500px){
+    .workdesc h2{
+        font-size: var(--small-15);
+    }
+}

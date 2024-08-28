@@ -3,7 +3,11 @@ import cgsImage from '../../assets/cgs.png';
 import alcalineImage from '../../assets/alcaline.png';
 import zukoImage from '../../assets/zukoCoffee.png';
 import portfolioImage from '../../assets/portfolio.png';
-import { RiImageLine, RiCodeSSlashLine } from "react-icons/ri";
+import cgsMaxImage from '../../assets/cgs-max.png';
+import alcalineMaxImage from '../../assets/alcaline-max.png';
+import zukoMaxImage from '../../assets/zukoCoffee-max.png';
+import portfolioMaxImage from '../../assets/portfolio-max.png';
+import { RiInformation2Line, RiCodeSSlashLine } from "react-icons/ri";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../App';
@@ -12,6 +16,7 @@ function Works(){
     const workContent = [
         {
             image:cgsImage,
+            maxImage:cgsMaxImage,
             heading:"Core Green Softwares landing page",
             definition:"Landing page with applicant management system",
             stack:"HTML,CSS,javascript,php,mysql,ajax",
@@ -20,6 +25,7 @@ function Works(){
         },
         {
             image:alcalineImage,
+            maxImage:alcalineMaxImage,
             heading:"Alcaline technologies landing page",
             definition:"A responsive landing page",
             stack:"HTML,CSS,javascript",
@@ -28,6 +34,7 @@ function Works(){
         },
         {
             image:zukoImage,
+            maxImage:zukoMaxImage,
             heading:"Zuko coffee",
             definition:"Attractive landing page for coffee shop",
             stack:"ReactJs,CSS,swiperJs",
@@ -36,7 +43,8 @@ function Works(){
         },
         {
             image:portfolioImage,
-            heading:"Personal portfolio",
+            maxImage:portfolioMaxImage,
+            heading:"Portfolio",
             definition:"A portfolio with visually appealing animations",
             stack:"ReactJs,CSS,swiperJs",
             liveUrl:'https://selvaprasanth-sellasamy.github.io/portfolio/',
@@ -58,6 +66,9 @@ function Works(){
     const redirect = (url) => {
         window.open(url,"_blank");
     }
+    const goTo = (name,image) => {
+        window.location.href = `/work?name=${name}&image=${image}`;
+    }
     
     return(
         <section name='works' ref={worksRef} className={workStyle.works}>
@@ -76,7 +87,7 @@ function Works(){
                             <figure>
                                 <img src={content.image} alt={content.heading}/>
                                 <div className={workStyle.hoverContent}>
-                                    <RiImageLine/>
+                                    <RiInformation2Line onClick={()=>goTo(content.heading.toLowerCase(),content.maxImage)}/>
                                     <HiArrowTopRightOnSquare onClick={() => redirect(content.liveUrl)}/>
                                     <RiCodeSSlashLine onClick={() => redirect(content.repoUrl)}/>
                                 </div>

@@ -26,7 +26,7 @@ function Navbar(){
     const {aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef} = useContext(AppContext);
 
     const handleNavigation = (reference) => {
-        reference.current.scrollIntoView({behavior:"smooth"});
+        reference.current ? reference.current.scrollIntoView({behavior:"smooth"}) : window.location.replace("/");
     }
 
     useEffect(()=>{
@@ -38,7 +38,7 @@ function Navbar(){
             });
         },{threshold:[.5,.75], rootMargin: "40px", scrollMargin:"40px"});
         [aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef].forEach(section=>{
-            Observer.observe(section.current);
+            section.current && Observer.observe(section.current);
         });
         return ()=> Observer.disconnect();
     },[aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef]);

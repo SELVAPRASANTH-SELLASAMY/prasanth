@@ -84,7 +84,7 @@
     overflow: initial;
 }
 .workList .workDefinition:hover .hoverContent{
-    top: 0;
+    top: .25rem;
 }
 @media screen and (width <= 768px) {
     .workList{

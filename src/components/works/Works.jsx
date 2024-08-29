@@ -67,7 +67,7 @@ function Works(){
         window.open(url,"_blank");
     }
     const goTo = (name,image) => {
-        window.location.href = `/work?name=${name}&image=${image}`;
+        window.location.href = `/#work?name=${name}&image=${image}`;
     }
     
     return(

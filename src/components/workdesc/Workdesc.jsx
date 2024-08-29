@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import workdescStyle from './workdesc.module.css';
 import contents from './workdescriptions.json';
 import {useSearchParams} from 'react-router-dom';
@@ -8,6 +9,9 @@ function Workdesc(){
     const splitContent = (workContent,splitter) => {
         return workContent.split(splitter);
     }
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    },[]);
     return(
         <section className={workdescStyle.workdesc}>
             <h2>{workName} <span className='bottomLine'><span className='movingBall'></span></span></h2>

@@ -2,7 +2,7 @@ import './App.css';
 import { Navbar, Home, About, Skills, Services, Resume, Works, Reviews, Blogs, Contact, Footer, Certification, Workdesc } from './components';
 import { createContext, useRef } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 const AppContext = createContext();
 function App() {
   const homeRef = useRef();
@@ -21,9 +21,9 @@ function App() {
           <meta name='author' content='Selvaprasanth'/>
         </Helmet>
         <AppContext.Provider value={navReferences}>
-          <Navbar/>
-          <main>
-            <Router>
+          <Router>
+            <Navbar/>
+            <main>
               <Routes>
                 <Route path='/' element = {
                   <>
@@ -51,9 +51,9 @@ function App() {
                   </>
                 }/>
               </Routes>
-            </Router>
-          </main>
-          <Footer/>
+            </main>
+            <Footer/>
+          </Router>
         </AppContext.Provider>
       </div>
     </HelmetProvider>

@@ -31,7 +31,7 @@ function Certification(){
             <div className={certifyStyle.certificateContainer}>
                 {
                     content.map(({image,url},index)=>(
-                        <Lazyimage key={index} componentClass={certifyStyle.img} placeholder={thumbnail} source={image} onClick={()=>window.open(url,"_blank","noreferrer noopener")}/>
+                        <Lazyimage key={index} componentClass={certifyStyle.img} placeholder={thumbnail} source={image} attachFunc = {()=>window.open(url,"_blank","noreferrer noopener")}/>
                     ))
                 }
             </div>

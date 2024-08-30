@@ -1,34 +1,21 @@
-import workStyle from './works.module.css';
-import cgsImage from '../../assets/cgs.png';
-import alcalineImage from '../../assets/alcaline.png';
-import zukoImage from '../../assets/zukoCoffee.png';
-import portfolioImage from '../../assets/portfolio.png';
-import cgsMaxImage from '../../assets/cgs-max.png';
-import alcalineMaxImage from '../../assets/alcaline-max.png';
-import zukoMaxImage from '../../assets/zukoCoffee-max.png';
-import portfolioMaxImage from '../../assets/portfolio-max.png';
-import cgsLazy from '../../assets/lazy_sources/cgs.png';
-import alcalinelazy from '../../assets/lazy_sources/alcaline.png';
-import zukolazy from '../../assets/lazy_sources/zukoCoffee.png';
-import portfoliolazy from '../../assets/lazy_sources/portfolio.png';
-import cgsmaxlazy from '../../assets/lazy_sources/cgs-max.png';
-import alcalinemaxlazy from '../../assets/lazy_sources/alcaline-max.png';
-import zukomaxlazy from '../../assets/lazy_sources/zukoCoffee-max.png';
-import portfoliomaxlazy from '../../assets/lazy_sources/portfolio-max.png'; 
+import workStyle from './works.module.css'; 
 import { RiInformation2Line, RiCodeSSlashLine } from "react-icons/ri";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../App';
 import Lazyimage from '../lazyimage/Lazyimage';
+import {cgs,M_cgs,X_cgs,XM_cgs,alcaline,M_alcaline,X_alcaline,XM_alcaline,zuko,M_zuko,X_zuko,XM_zuko,portfolio,M_portfolio,X_portfolio,XM_portfolio} from './workresources';
 function Works(){
     const {worksRef} = useContext(AppContext);
     const workContent = [
         {
-            image:cgsImage,
-            maxImage:cgsMaxImage,
+            image:{
+                min:cgs,
+                max:X_cgs
+            },
             thumb:{
-                max:cgsmaxlazy,
-                min:cgsLazy
+                min:M_cgs,
+                max:XM_cgs
             },
             heading:"Core Green Softwares landing page",
             definition:"Landing page with applicant management system",
@@ -37,11 +24,13 @@ function Works(){
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/Core-Green-Softwares.git'
         },
         {
-            image:alcalineImage,
-            maxImage:alcalineMaxImage,
+            image:{
+                min:alcaline,
+                max:X_alcaline
+            },
             thumb:{
-                max:alcalinemaxlazy,
-                min:alcalinelazy
+                min:M_alcaline,
+                max:XM_alcaline
             },
             heading:"Alcaline technologies landing page",
             definition:"A responsive landing page",
@@ -50,11 +39,13 @@ function Works(){
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/Alkaline_technologies.git'
         },
         {
-            image:zukoImage,
-            maxImage:zukoMaxImage,
+            image:{
+                min:zuko,
+                max:X_zuko
+            },
             thumb:{
-                max:zukomaxlazy,
-                min:zukolazy
+                min:M_zuko,
+                max:XM_zuko
             },
             heading:"Zuko coffee",
             definition:"Attractive landing page for coffee shop",
@@ -63,11 +54,13 @@ function Works(){
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/zuko_coffee.git'
         },
         {
-            image:portfolioImage,
-            maxImage:portfolioMaxImage,
+            image:{
+                min:portfolio,
+                max:X_portfolio
+            },
             thumb:{
-                max:portfoliomaxlazy,
-                min:portfoliolazy
+                min:M_portfolio,
+                max:XM_portfolio
             },
             heading:"Portfolio",
             definition:"A portfolio with visually appealing animations",
@@ -110,9 +103,9 @@ function Works(){
                     filteredContents.map((content,index)=>(
                         <div key={index} className={workStyle.workDefinition}>
                             <div className={workStyle.figure}>
-                                <Lazyimage componentClass={workStyle.img} placeholder={content.thumb.min} source={content.image}/>
+                                <Lazyimage componentClass={workStyle.img} placeholder={content.thumb.min} source={content.image.min}/>
                                 <div className={workStyle.hoverContent}>
-                                    <RiInformation2Line onClick={()=>goTo(content.heading.toLowerCase(),content.maxImage)}/>
+                                    <RiInformation2Line onClick={()=>goTo(content.heading.toLowerCase(),content.image.max)}/>
                                     <HiArrowTopRightOnSquare onClick={() => redirect(content.liveUrl)}/>
                                     <RiCodeSSlashLine onClick={() => redirect(content.repoUrl)}/>
                                 </div>

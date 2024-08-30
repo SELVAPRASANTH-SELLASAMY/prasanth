@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import lazyComponentStyle from './lazyimage.module.css';
-function Lazyimage({componentClass,placeholder,source}){
+function Lazyimage({componentClass,placeholder,source,attachFunc}){
     const image = useRef();
     useEffect(()=>{
         const img = image.current;
@@ -16,7 +16,7 @@ function Lazyimage({componentClass,placeholder,source}){
 
     return(
         <figure className={`${lazyComponentStyle.container} ${componentClass}`}>
-            <img loading='lazy' ref={image} src={placeholder} alt="src-image" />
+            <img onClick={attachFunc && attachFunc} loading='lazy' ref={image} src={placeholder} alt="src-image" />
         </figure>
     );
 }

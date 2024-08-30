@@ -11,6 +11,7 @@
     border-radius: .25rem;
     transition: 500ms;
     cursor: pointer;
+    overflow: hidden;
 }
 .certification .img:hover{
     transform: translateY(-.5rem);

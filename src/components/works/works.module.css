@@ -34,16 +34,16 @@
 .workList .workDefinition:hover{
     transform: translateY(-.5rem);
 }
-.workList .workDefinition figure, .workList .workDefinition figure img{
+.workList .workDefinition .figure, .workList .workDefinition .figure img{
     width: 100%;
     aspect-ratio: 2/1.25;
 }
-.workList .workDefinition figure{
+.workList .workDefinition .figure{
     position: relative;
     overflow: hidden;
     padding: .5rem;
 }
-.workList .workDefinition figure img{
+.workList .workDefinition .figure img{
     vertical-align: middle;
 }
 .workList .workDefinition h5{

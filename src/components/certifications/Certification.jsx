@@ -3,6 +3,8 @@ import jsbasic from './assets/jsbasic.png';
 import java from './assets/java.png';
 import sql from './assets/sql.png';
 import jsintermediate from './assets/jsinter.png';
+import Lazyimage from '../lazyimage/Lazyimage';
+import thumbnail from '../../assets/lazy_sources/certificate.png';
 function Certification(){
     const content = [
         {
@@ -29,7 +31,7 @@ function Certification(){
             <div className={certifyStyle.certificateContainer}>
                 {
                     content.map(({image,url},index)=>(
-                        <img loading='lazy' key={index} src={image} onClick={()=>window.open(url,"_blank","noreferrer noopener")} alt="certificate-image" />
+                        <Lazyimage key={index} componentClass={certifyStyle.img} placeholder={thumbnail} source={image} onClick={()=>window.open(url,"_blank","noreferrer noopener")}/>
                     ))
                 }
             </div>

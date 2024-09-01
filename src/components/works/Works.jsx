@@ -4,19 +4,13 @@ import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../App';
 import Lazyimage from '../lazyimage/Lazyimage';
-import {cgs,M_cgs,X_cgs,XM_cgs,alcaline,M_alcaline,X_alcaline,XM_alcaline,zuko,M_zuko,X_zuko,XM_zuko,portfolio,M_portfolio,X_portfolio,XM_portfolio} from './workresources';
+import {cgs,M_cgs,alcaline,M_alcaline,zuko,M_zuko,portfolio,M_portfolio} from './workresources';
 function Works(){
     const {worksRef} = useContext(AppContext);
     const workContent = [
         {
-            image:{
-                min:cgs,
-                max:X_cgs
-            },
-            thumb:{
-                min:M_cgs,
-                max:XM_cgs
-            },
+            image:cgs,
+            thumb:M_cgs,
             heading:"Core Green Softwares landing page",
             definition:"Landing page with applicant management system",
             stack:"HTML,CSS,javascript,php,mysql,ajax",
@@ -24,14 +18,8 @@ function Works(){
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/Core-Green-Softwares.git'
         },
         {
-            image:{
-                min:alcaline,
-                max:X_alcaline
-            },
-            thumb:{
-                min:M_alcaline,
-                max:XM_alcaline
-            },
+            image:alcaline,
+            thumb:M_alcaline,
             heading:"Alcaline technologies landing page",
             definition:"A responsive landing page",
             stack:"HTML,CSS,javascript",
@@ -39,14 +27,8 @@ function Works(){
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/Alkaline_technologies.git'
         },
         {
-            image:{
-                min:zuko,
-                max:X_zuko
-            },
-            thumb:{
-                min:M_zuko,
-                max:XM_zuko
-            },
+            image:zuko,
+            thumb:M_zuko,
             heading:"Zuko coffee",
             definition:"Attractive landing page for coffee shop",
             stack:"ReactJs,CSS,swiperJs",
@@ -54,14 +36,8 @@ function Works(){
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/zuko_coffee.git'
         },
         {
-            image:{
-                min:portfolio,
-                max:X_portfolio
-            },
-            thumb:{
-                min:M_portfolio,
-                max:XM_portfolio
-            },
+            image:portfolio,
+            thumb:M_portfolio,
             heading:"Portfolio",
             definition:"A portfolio with visually appealing animations",
             stack:"ReactJs,CSS,swiperJs",
@@ -84,8 +60,8 @@ function Works(){
     const redirect = (url) => {
         window.open(url,"_blank");
     }
-    const goTo = (name,image) => {
-        window.location.href = `/#work?name=${name}&image=${image}`;
+    const goTo = (name) => {
+        window.location.href = `/#work?name=${name}`;
     }
     
     return(
@@ -103,9 +79,9 @@ function Works(){
                     filteredContents.map((content,index)=>(
                         <div key={index} className={workStyle.workDefinition}>
                             <div className={workStyle.figure}>
-                                <Lazyimage componentClass={workStyle.img} placeholder={content.thumb.min} source={content.image.min}/>
+                                <Lazyimage componentClass={workStyle.img} placeholder={content.thumb} source={content.image}/>
                                 <div className={workStyle.hoverContent}>
-                                    <RiInformation2Line onClick={()=>goTo(content.heading.toLowerCase(),content.image.max)}/>
+                                    <RiInformation2Line onClick={()=>goTo(content.heading.toLowerCase())}/>
                                     <HiArrowTopRightOnSquare onClick={() => redirect(content.liveUrl)}/>
                                     <RiCodeSSlashLine onClick={() => redirect(content.repoUrl)}/>
                                 </div>

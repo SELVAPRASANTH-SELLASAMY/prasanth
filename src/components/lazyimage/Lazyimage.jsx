@@ -16,7 +16,7 @@ function Lazyimage({componentClass,placeholder,source,attachFunc}){
 
     return(
         <figure className={`${lazyComponentStyle.container} ${componentClass}`}>
-            <img onClick={attachFunc && attachFunc} loading='lazy' ref={image} src={placeholder} alt="src-image" />
+            <img loading='lazy' onClick={attachFunc && attachFunc} ref={image} src={placeholder} alt="src-image" />
         </figure>
     );
 }

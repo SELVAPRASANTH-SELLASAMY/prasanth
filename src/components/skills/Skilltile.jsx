@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import skillStyle from './skills.module.css';
+import useObserver from '../cutomhooks/useObserver';
 function Skilltile({percent,tech}){
     const [percentage,setPercentage] = useState(0);
-    const [interSect,setIntersect] = useState(false);
     const skillProgressbar = useRef();
     const handlePercent = () => {
         var temp = 0;
@@ -16,25 +16,14 @@ function Skilltile({percent,tech}){
         return ()=> clearInterval(incrementInterval);
     }
 
-    useEffect(()=>{
-        const Observer = new IntersectionObserver(entries=>{
-            entries.forEach(entry=>{
-                if(entry.isIntersecting){
-                    setIntersect(true);
-                    Observer.unobserve(entry.target);
-                }
-            })
-        },{threshold:.5});
-        skillProgressbar.current && Observer.observe(skillProgressbar.current);
-        return () => Observer.disconnect();
-    },[]);
-
+    const interSect = useObserver([skillProgressbar],{threshold:.5});
     useEffect(()=>{
         if(interSect){
             handlePercent();
         }
         //eslint-disable-next-line react-hooks/exhaustive-deps
     },[interSect]);
+
     return(
         <div ref={skillProgressbar} className={skillStyle.skillTile}>
             <svg viewBox='0 0 200 125'>

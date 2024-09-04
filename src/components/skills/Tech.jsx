@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import skillStyle from './skills.module.css';
+import useObserver from '../cutomhooks/useObserver';
 function Tech({percent,stack}){
     const [percentage,setPercentage] = useState(0);
-    const [interSect,setIntersect] = useState(false);
     const techProgressbar = useRef();
     const handlePercent = () => {
         var temp = 0;
@@ -16,19 +16,7 @@ function Tech({percent,stack}){
         return () => clearInterval(incrementInterval);
     }
 
-    useEffect(()=>{
-        const Observer = new IntersectionObserver(entries=>{
-            entries.forEach(entry=>{
-                if(entry.isIntersecting){
-                    setIntersect(true);
-                    Observer.unobserve(entry.target);
-                }
-            })
-        },{threshold:1});
-        techProgressbar.current && Observer.observe(techProgressbar.current);
-        return () => Observer.disconnect();
-    },[]);
-    
+    const interSect = useObserver([techProgressbar],{threshold:1});
     useEffect(()=>{
         if(interSect){
             handlePercent();

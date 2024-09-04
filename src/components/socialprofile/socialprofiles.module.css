@@ -12,7 +12,6 @@
     border-radius: .25rem;
     cursor: pointer;
     box-shadow: var(--smokeShadow);
-    background-color: rgb(15 23 42); /*TODO:Can be stored in variable*/
 }
 .socialMedias ul :nth-child(even){
     background-color: var(--green);

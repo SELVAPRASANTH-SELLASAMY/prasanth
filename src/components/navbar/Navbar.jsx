@@ -2,9 +2,11 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import navStyle from './navbar.module.css';
 import { RiMenuFill } from "react-icons/ri";
 import { AppContext } from '../../App';
+import { useLocation } from 'react-router-dom';
 function Navbar(){
     const [changeBg,setChangeBg] = useState(false);
     const [activeWindow,setActiveWindow] = useState('Home');
+    const location = useLocation();
 
     const mobileNavbar = useRef();
     const scrollEffect = {
@@ -26,7 +28,7 @@ function Navbar(){
     const {aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef} = useContext(AppContext);
 
     const handleNavigation = (reference) => {
-        reference.current ? reference.current.scrollIntoView({behavior:"smooth"}) : window.location.replace("/");
+        reference.current ? reference.current.scrollIntoView({behavior:"smooth"}) : window.history.back();
     }
 
     useEffect(()=>{
@@ -41,7 +43,7 @@ function Navbar(){
             section.current && Observer.observe(section.current);
         });
         return ()=> Observer.disconnect();
-    },[aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef]);
+    },[aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef,location.pathname]);
 
     useEffect(()=>{
         window.onscroll = handleScrollEffect;

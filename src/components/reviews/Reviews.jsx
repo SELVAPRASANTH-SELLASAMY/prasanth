@@ -1,5 +1,5 @@
 import reviewStyle from './reviews.module.css';
-import sampleImage from '../../assets/about-image.webp';
+import sampleImage from '../../assets/about-image.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';

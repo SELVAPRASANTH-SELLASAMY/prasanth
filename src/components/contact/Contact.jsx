@@ -78,8 +78,8 @@ function Contact(){
                     <div className={contactStyle.email}>
                         <h5>Contact on mail</h5>
                         <address>
-                            <a href="mailto:info@selvaprasanth.tech" target='_blank' rel='noreferrer noopener'>info@selvaprasanth.tech</a>
                             <a href="mailto:prasanthsamy61@gmail.com" target='_blank' rel='noreferrer noopener'>prasanthsamy61@gmail.com</a>
+                            <a href="mailto:selvaprasanths.20mech@kongu.edu" target='_blank' rel='noreferrer noopener'>selvaprasanths.20mech@kongu.edu</a>
                         </address>
                     </div>
                 </div>

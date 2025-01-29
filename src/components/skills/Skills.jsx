@@ -4,11 +4,11 @@ import Tech from './Tech';
 function Skills(){
     const techArray = [
         {
-            stack:"C++",
+            stack:"Java",
             percent:75
         },
         {
-            stack:"Java",
+            stack:"C++",
             percent:65
         },
         {
@@ -25,15 +25,15 @@ function Skills(){
         },
         {
             stack:"JavaScript",
-            percent:60
+            percent:65
         },
         {
             stack:"MySQL",
-            percent:50
+            percent:45
         },
         {
             stack:"MongoDB",
-            percent:50
+            percent:75
         }
     ];
     const skillArray = [
@@ -43,11 +43,11 @@ function Skills(){
         },
         {
             tech:"Back-end Development",
-            percent:65
+            percent:70
         },
         {
             tech:"Database",
-            percent:50
+            percent:65
         }
     ]
     return(
